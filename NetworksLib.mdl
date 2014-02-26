@@ -1,0 +1,1618 @@
+Library {
+  Name			  "NetworksLib"
+  Version		  7.5
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Sun Jan 10 16:40:34 2010"
+  Creator		  "jpalma"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "jpalma"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Aug 16 04:06:11 2011"
+  RTWModifiedTimeStamp	  235368328
+  ModelVersionFormat	  "1.%<AutoIncrement:61>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  off
+	  BooleanDataType	  off
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 400, 210, 1280, 840 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "fixdt(1,16,0)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+      LinearizeMemory	      off
+      LinearizeAsDelay	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      DataPortOrder	      "One-based contiguous"
+      Inputs		      "3"
+      DataPortIndices	      "{1,2,3}"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  System {
+    Name		    "NetworksLib"
+    Location		    [1708, 522, 2428, 1014]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    15
+    Block {
+      BlockType		      SubSystem
+      Name		      "DistToConnectivity"
+      SID		      1
+      Ports		      [1, 1]
+      Position		      [195, 303, 265, 367]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskPromptString	      "ConnectChoice|Gaussian Width|Gaussian Mean"
+      MaskStyleString	      "popup(1-to-1|1-to-All|1-to-Others|Gaussian),edit,edit"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "maskStr = get_param(gcb,'MaskValues');\nvisibilitiesStr = {'on';'off';'off'};\nif strcm"
+      "p(maskStr{1},'Gaussian')\n        visibilitiesStr(2) = {'on'};\n        visibilitiesStr(3) = {'on'};\nend\nset_p"
+      "aram(gcb,'MaskVisibilities',visibilitiesStr);||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,off,off"
+      MaskToolTipString	      "on,on,on"
+      MaskVariables	      "connectChoice=@1;gaussWidth=@2;gaussMean=@3;"
+      MaskDisplay	      "image(imread('../libs/icons/Connect.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1-to-1|1|0"
+      System {
+	Name			"DistToConnectivity"
+	Location		[234, 141, 813, 506]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "DistMat"
+	  SID			  2
+	  Position		  [65, 133, 95, 147]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "1-To-Others"
+	  SID			  3
+	  Ports			  [1, 1]
+	  Position		  [160, 185, 190, 215]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  ">"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "1-to-1"
+	  SID			  4
+	  Ports			  [1, 1]
+	  Position		  [165, 65, 195, 95]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  "=="
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "1-to-All"
+	  SID			  5
+	  Ports			  [1, 1]
+	  Position		  [165, 125, 195, 155]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  ">="
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "Excit\nSwitch"
+	  SID			  6
+	  Ports			  [5, 1]
+	  Position		  [370, 111, 405, 169]
+	  Inputs		  "4"
+	  zeroidx		  off
+	  InputSameDT		  off
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Gaussian"
+	  SID			  7
+	  Ports			  [1, 1]
+	  Position		  [150, 243, 195, 287]
+	  LibraryVersion	  "1.179"
+	  SourceBlock		  "fuzblock/Membership \nFunctions/Gaussian MF"
+	  SourceType		  "gaussmf"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sigma			  "gaussWidth"
+	  mu			  "gaussMean"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "connectChoice"
+	  SID			  8
+	  Position		  [235, 32, 325, 58]
+	  Value			  "connectChoice"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ConnectMat"
+	  SID			  9
+	  Position		  [455, 133, 485, 147]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "DistMat"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    Points		    [0, 60]
+	    Branch {
+	      Points		      [0, 65]
+	      DstBlock		      "Gaussian"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "1-To-Others"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "1-to-All"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "1-to-1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Excit\nSwitch"
+	  SrcPort		  1
+	  DstBlock		  "ConnectMat"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1-to-1"
+	  SrcPort		  1
+	  Points		  [75, 0; 0, 50]
+	  DstBlock		  "Excit\nSwitch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "connectChoice"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 75]
+	  DstBlock		  "Excit\nSwitch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1-to-All"
+	  SrcPort		  1
+	  DstBlock		  "Excit\nSwitch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "1-To-Others"
+	  SrcPort		  1
+	  Points		  [80, 0; 0, -50]
+	  DstBlock		  "Excit\nSwitch"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Gaussian"
+	  SrcPort		  1
+	  Points		  [90, 0; 0, -105]
+	  DstBlock		  "Excit\nSwitch"
+	  DstPort		  5
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Shunting Recurrent Field 1D"
+      SID		      10
+      Ports		      [1, 3]
+      Position		      [400, 55, 550, 175]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskPromptString	      "Signal Function Choice|Threshold (SF)|Threshold of Switch (SF)|Slope (SF)|Asymptote (SF)"
+      "|Ground (SF)|A, Neuron Decay|B, Neuron Shunting Max|Field Length|Cyclic?|C, Inhibitory Strength|D, Excitatory St"
+      "rength|tau, Time Constant|Inhibitory Connectivity|Inhibitory Width|Excitatory Connectectivity|Excitatory Width"
+      MaskStyleString	      "popup(Linear-SF|Faster-SF|Slower-SF|Sigmoid-SF|Sigmoid-To-Linear-SF),edit,edit,edit,edit,"
+      "edit,edit,edit,edit,checkbox,edit,edit,edit,popup(1-to-1|1-to-All|1-to-Others|Gaussian),edit,popup(1-to-1|1-to-A"
+      "ll|1-to-Others|Gaussian),edit"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "maskStr = get_param(gcb,'MaskValues');\n\nvisibilitiesStr = {'on';'off';'off';'off';'of"
+      "f';'off';'on';'on'; ...\n                   'on';'on';'on';'on';'on';'on';'off';'on';'off'};\nif strcmp(maskStr{"
+      "1},'Sigmoid-SF')\n        visibilitiesStr(2) = {'on'};\n        visibilitiesStr(4) = {'on'};\n        visibiliti"
+      "esStr(5) = {'on'};\n        visibilitiesStr(6) = {'on'};\nelse if strcmp(maskStr{1},'Sigmoid-To-Linear-SF')\n   "
+      "     visibilitiesStr(2) = {'on'};\n        visibilitiesStr(3) = {'on'};\n        visibilitiesStr(4) = {'on'};\n "
+      "       visibilitiesStr(5) = {'on'};\n        visibilitiesStr(6) = {'on'};\n    end\nend\nif strcmp(maskStr{14},'"
+      "Gaussian')\n        visibilitiesStr(15) = {'on'};\nend    \nif strcmp(maskStr{16},'Gaussian')\n        visibilit"
+      "iesStr(17) = {'on'};\nend\nset_param(gcb,'MaskVisibilities',visibilitiesStr);\n|||||||||||||maskStr = get_param("
+      "gcb,'MaskValues');\n\nvisibilitiesStr = {'on';'off';'off';'off';'off';'off';'on';'on'; ...\n                   '"
+      "on';'on';'on';'on';'on';'on';'off';'on';'off'};\nif strcmp(maskStr{1},'Sigmoid-SF')\n        visibilitiesStr(2) "
+      "= {'on'};\n        visibilitiesStr(4) = {'on'};\n        visibilitiesStr(5) = {'on'};\n        visibilitiesStr(6"
+      ") = {'on'};\nelse if strcmp(maskStr{1},'Sigmoid-To-Linear-SF')\n        visibilitiesStr(2) = {'on'};\n        vi"
+      "sibilitiesStr(3) = {'on'};\n        visibilitiesStr(4) = {'on'};\n        visibilitiesStr(5) = {'on'};\n        "
+      "visibilitiesStr(6) = {'on'};\n    end\nend\nif strcmp(maskStr{14},'Gaussian')\n        visibilitiesStr(15) = {'o"
+      "n'};\nend    \nif strcmp(maskStr{16},'Gaussian')\n        visibilitiesStr(17) = {'on'};\nend\nset_param(gcb,'Mas"
+      "kVisibilities',visibilitiesStr);||maskStr = get_param(gcb,'MaskValues');\n\nvisibilitiesStr = {'on';'off';'off';"
+      "'off';'off';'off';'on';'on'; ...\n                   'on';'on';'on';'on';'on';'on';'off';'on';'off'};\nif strcmp"
+      "(maskStr{1},'Sigmoid-SF')\n        visibilitiesStr(2) = {'on'};\n        visibilitiesStr(4) = {'on'};\n        v"
+      "isibilitiesStr(5) = {'on'};\n        visibilitiesStr(6) = {'on'};\nelse if strcmp(maskStr{1},'Sigmoid-To-Linear-"
+      "SF')\n        visibilitiesStr(2) = {'on'};\n        visibilitiesStr(3) = {'on'};\n        visibilitiesStr(4) = {"
+      "'on'};\n        visibilitiesStr(5) = {'on'};\n        visibilitiesStr(6) = {'on'};\n    end\nend\nif strcmp(mask"
+      "Str{14},'Gaussian')\n        visibilitiesStr(15) = {'on'};\nend    \nif strcmp(maskStr{16},'Gaussian')\n        "
+      "visibilitiesStr(17) = {'on'};\nend\nset_param(gcb,'MaskVisibilities',visibilitiesStr);|"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,off,on,on,on,on,on,on,on,on,on,on,on,off,on,off"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVariables	      "signalFunction=&1;threshold=&2;thresholdSwitch=&3;slope=&4;asymptote=&5;ground=&6;A=&7;B=&8"
+      ";fieldLength=&9;ifCyclic=&10;C=&11;D=&12;tau=&13;inhibConnect=&14;inhibWidth=&15;excitConnect=&16;excitWidth=&17"
+      ";"
+      MaskInitialization      "set_param([gcb '/Shunting Recurrent Field Core'], 'signalFunction', signalFunction);\ns"
+      "et_param([gcb '/Shunting Recurrent Field Core'], 'threshold', threshold);\nset_param([gcb '/Shunting Recurrent F"
+      "ield Core'], 'thresholdSwitch', thresholdSwitch);\nset_param([gcb '/Shunting Recurrent Field Core'], 'slope', sl"
+      "ope);\nset_param([gcb '/Shunting Recurrent Field Core'], 'asymptote', asymptote);\nset_param([gcb '/Shunting Rec"
+      "urrent Field Core'], 'ground', ground);\nset_param([gcb '/Shunting Recurrent Field Core'], 'A', A);\nset_param(["
+      "gcb '/Shunting Recurrent Field Core'], 'B', B);\nset_param([gcb '/Shunting Recurrent Field Core'], 'C', C);\nset"
+      "_param([gcb '/Shunting Recurrent Field Core'], 'D', D);\nset_param([gcb '/Shunting Recurrent Field Core'], 'tau'"
+      ", tau);\nset_param([gcb '/Shunting Recurrent Field Core'], 'inhibConnect', inhibConnect);\nset_param([gcb '/Shun"
+      "ting Recurrent Field Core'], 'inhibWidth', inhibWidth);\nset_param([gcb '/Shunting Recurrent Field Core'], 'exci"
+      "tConnect', excitConnect);\nset_param([gcb '/Shunting Recurrent Field Core'], 'excitWidth', excitWidth);\nset_par"
+      "am([gcb '/DistMatrix1D'], 'vectorLength', fieldLength);\nset_param([gcb '/DistMatrix1D'], 'ifCyclic', ifCyclic);"
+      "\n"
+      MaskDisplay	      "image(imread('../libs/icons/Networks.jpg'),'center');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "Sigmoid-SF|0.3|0|9|1|0|0.1|1|10|off|1|1|1|1-to-Others|5|1-to-1|2"
+      System {
+	Name			"Shunting Recurrent Field 1D"
+	Location		[318, 380, 1077, 907]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	6
+	Block {
+	  BlockType		  Inport
+	  Name			  "I, Input"
+	  SID			  1
+	  Position		  [165, 231, 195, 249]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DistMatrix1D"
+	  SID			  2
+	  Ports			  [0, 1]
+	  Position		  [150, 134, 215, 196]
+	  LibraryVersion	  "1.603"
+	  SourceBlock		  "StimuliLib/DistMatrix1D"
+	  SourceType		  ""
+	  ShowPortLabels	  "none"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  vectorLength		  "10"
+	  ifCyclic		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Shunting Recurrent Field Core"
+	  SID			  3
+	  Ports			  [2, 3]
+	  Position		  [260, 134, 420, 256]
+	  LibraryVersion	  "1.60"
+	  SourceBlock		  "NetworksLib/Shunting Recurrent Field Core"
+	  SourceType		  ""
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  signalFunction	  "Sigmoid-SF"
+	  threshold		  "0.3"
+	  thresholdSwitch	  "0"
+	  slope			  "9"
+	  asymptote		  "1"
+	  ground		  "0"
+	  A			  "0.1"
+	  B			  "1"
+	  C			  "1"
+	  D			  "1"
+	  tau			  "1"
+	  inhibConnect		  "1-to-Others"
+	  inhibWidth		  "5"
+	  excitConnect		  "1-to-1"
+	  excitWidth		  "2"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PreSF, x"
+	  SID			  4
+	  Position		  [485, 188, 515, 202]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PostSF, f(x)"
+	  SID			  5
+	  Position		  [485, 228, 515, 242]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Inhibition"
+	  SID			  6
+	  Position		  [485, 148, 515, 162]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Shunting Recurrent Field Core"
+	  SrcPort		  1
+	  DstBlock		  "Inhibition"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "DistMatrix1D"
+	  SrcPort		  1
+	  DstBlock		  "Shunting Recurrent Field Core"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Shunting Recurrent Field Core"
+	  SrcPort		  3
+	  DstBlock		  "PostSF, f(x)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Shunting Recurrent Field Core"
+	  SrcPort		  2
+	  DstBlock		  "PreSF, x"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "I, Input"
+	  SrcPort		  1
+	  Points		  [0, -15]
+	  DstBlock		  "Shunting Recurrent Field Core"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Shunting Recurrent Field Core"
+      SID		      11
+      Ports		      [2, 3]
+      Position		      [150, 54, 310, 176]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskPromptString	      "Signal Function Choice|Threshold (SF)|Threshold of Switch (SF)|Slope (SF)|Asymptote (SF)"
+      "|Gound (SF)|A, Neuron Decay|B, Neuron Shunting Max|C, Inhibitory Strength|D, Excitatory Strength|tau, Time Const"
+      "ant|Inhibitory Connectivity|Inhibitory Width|Excitatory Connectivity|Excitatory Width"
+      MaskStyleString	      "popup(Linear-SF|Faster-SF|Slower-SF|Sigmoid-SF|Sigmoid-To-Linear-SF),edit,edit,edit,edit,"
+      "edit,edit,edit,edit,edit,edit,popup(1-to-1|1-to-All|1-to-Others|Gaussian),edit,popup(1-to-1|1-to-All|1-to-Others"
+      "|Gaussian),edit"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "maskStr = get_param(gcb,'MaskValues');\n\nvisibilitiesStr = {'on';'off';'off';'off';'of"
+      "f';'off';'on';'on'; ...\n                   'on';'on';'on';'on';'off';'on';'off'};\nif strcmp(maskStr{1},'Sigmoi"
+      "d-SF')\n        visibilitiesStr(2) = {'on'};\n        visibilitiesStr(4) = {'on'};\n        visibilitiesStr(5) ="
+      " {'on'};\n        visibilitiesStr(6) = {'on'};\nelse if strcmp(maskStr{1},'Sigmoid-To-Linear-SF')\n        visib"
+      "ilitiesStr(2) = {'on'};\n        visibilitiesStr(3) = {'on'};\n        visibilitiesStr(4) = {'on'};\n        vis"
+      "ibilitiesStr(5) = {'on'};\n        visibilitiesStr(6) = {'on'};\n    end\nend\nif strcmp(maskStr{12},'Gaussian')"
+      "\n        visibilitiesStr(13) = {'on'};\nend    \nif strcmp(maskStr{14},'Gaussian')\n        visibilitiesStr(15)"
+      " = {'on'};\nend\nset_param(gcb,'MaskVisibilities',visibilitiesStr);\n|||||||||||maskStr = get_param(gcb,'MaskVal"
+      "ues');\n\nvisibilitiesStr = {'on';'off';'off';'off';'off';'off';'on';'on'; ...\n                   'on';'on';'on"
+      "';'on';'off';'on';'off'};\nif strcmp(maskStr{1},'Sigmoid-SF')\n        visibilitiesStr(2) = {'on'};\n        vis"
+      "ibilitiesStr(4) = {'on'};\n        visibilitiesStr(5) = {'on'};\n        visibilitiesStr(6) = {'on'};\nelse if s"
+      "trcmp(maskStr{1},'Sigmoid-To-Linear-SF')\n        visibilitiesStr(2) = {'on'};\n        visibilitiesStr(3) = {'o"
+      "n'};\n        visibilitiesStr(4) = {'on'};\n        visibilitiesStr(5) = {'on'};\n        visibilitiesStr(6) = {"
+      "'on'};\n    end\nend\nif strcmp(maskStr{12},'Gaussian')\n        visibilitiesStr(13) = {'on'};\nend    \nif strc"
+      "mp(maskStr{14},'Gaussian')\n        visibilitiesStr(15) = {'on'};\nend\nset_param(gcb,'MaskVisibilities',visibil"
+      "itiesStr);\n\n||maskStr = get_param(gcb,'MaskValues');\n\nvisibilitiesStr = {'on';'off';'off';'off';'off';'off';"
+      "'on';'on'; ...\n                   'on';'on';'on';'on';'off';'on';'off'};\nif strcmp(maskStr{1},'Sigmoid-SF')\n "
+      "       visibilitiesStr(2) = {'on'};\n        visibilitiesStr(4) = {'on'};\n        visibilitiesStr(5) = {'on'};\n"
+      "        visibilitiesStr(6) = {'on'};\nelse if strcmp(maskStr{1},'Sigmoid-To-Linear-SF')\n        visibilitiesStr"
+      "(2) = {'on'};\n        visibilitiesStr(3) = {'on'};\n        visibilitiesStr(4) = {'on'};\n        visibilitiesS"
+      "tr(5) = {'on'};\n        visibilitiesStr(6) = {'on'};\n    end\nend\nif strcmp(maskStr{12},'Gaussian')\n        "
+      "visibilitiesStr(13) = {'on'};\nend    \nif strcmp(maskStr{14},'Gaussian')\n        visibilitiesStr(15) = {'on'};"
+      "\nend\nset_param(gcb,'MaskVisibilities',visibilitiesStr);\n\n|"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,off,on,on,on,on,on,on,on,on,on,off,on,off"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVariables	      "signalFunction=&1;threshold=&2;thresholdSwitch=&3;slope=&4;asymptote=&5;ground=&6;A=@7;B=@8"
+      ";C=@9;D=@10;tau=@11;inhibConnect=&12;inhibWidth=&13;excitConnect=&14;excitWidth=&15;"
+      MaskInitialization      "set_param([gcb '/Signal Function'], 'BlockChoice', signalFunction);\nif(strcmp(signalFu"
+      "nction,'Sigmoid-SF'))\n   maskStr = get_param([gcb '/Signal Function/' signalFunction],'MaskValues');\n   maskSt"
+      "r{1} = threshold;\n   maskStr{2} = slope;\n   maskStr{3} = asymptote;\n   maskStr{4} = ground;\n   set_param([gc"
+      "b '/Signal Function/' signalFunction], 'MaskValues', maskStr);\nend\nif(strcmp(signalFunction,'Sigmoid-To-Linear"
+      "-SF'))\n   maskStr = get_param([gcb '/Signal Function/' signalFunction],'MaskValues');\n   maskStr{1} = threshol"
+      "d;\n   maskStr{2} = thresholdSwitch;\n   maskStr{3} = slope;\n   maskStr{4} = asymptote;\n   maskStr{5} = ground"
+      ";\n   set_param([gcb '/Signal Function/' signalFunction], 'MaskValues', maskStr);\nend\nset_param([gcb '/InhibCo"
+      "nnectivity'], 'connectChoice', inhibConnect);\nset_param([gcb '/InhibConnectivity'], 'gaussWidth', inhibWidth);\n"
+      "set_param([gcb '/InhibConnectivity'], 'gaussMean', '0');\nset_param([gcb '/ExcitConnectivity'], 'connectChoice',"
+      " excitConnect);\nset_param([gcb '/ExcitConnectivity'], 'gaussWidth', excitWidth);\nset_param([gcb '/ExcitConnect"
+      "ivity'], 'gaussMean', '0');\n"
+      MaskDisplay	      "image(imread('../libs/icons/Networks.jpg'),'center');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "Sigmoid-SF|0.3|0|9|1|0|0.1|1|1|1|1|1-to-Others|5|1-to-1|2"
+      System {
+	Name			"Shunting Recurrent Field Core"
+	Location		[214, 504, 1217, 926]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	14
+	Block {
+	  BlockType		  Inport
+	  Name			  "DistMat"
+	  SID			  1
+	  Position		  [145, 178, 175, 192]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "I, Input"
+	  SID			  2
+	  Position		  [525, 273, 555, 287]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ExcitConnectivity"
+	  SID			  3
+	  Ports			  [1, 1]
+	  Position		  [245, 98, 315, 162]
+	  LibraryVersion	  "1.60"
+	  SourceBlock		  "NetworksLib/DistToConnectivity"
+	  SourceType		  ""
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  connectChoice		  "1-to-1"
+	  gaussWidth		  "2"
+	  gaussMean		  "0"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Excitation\nCalc"
+	  SID			  4
+	  Ports			  [2, 1]
+	  Position		  [410, 119, 465, 161]
+	  Multiplication	  "Matrix(*)"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "InhibConnectivity"
+	  SID			  5
+	  Ports			  [1, 1]
+	  Position		  [245, 188, 315, 252]
+	  LibraryVersion	  "1.60"
+	  SourceBlock		  "NetworksLib/DistToConnectivity"
+	  SourceType		  ""
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  connectChoice		  "1-to-Others"
+	  gaussWidth		  "5"
+	  gaussMean		  "0"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Inhibition\nCalc"
+	  SID			  6
+	  Ports			  [2, 1]
+	  Position		  [415, 209, 470, 251]
+	  Multiplication	  "Matrix(*)"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Inhibitory Gain"
+	  SID			  7
+	  Position		  [510, 215, 565, 245]
+	  Gain			  "-C"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "Memory1"
+	  SID			  8
+	  Position		  [690, 305, 720, 335]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Recurrent Gain"
+	  SID			  14
+	  Position		  [510, 122, 565, 158]
+	  Gain			  "D"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Shunting Neuron"
+	  SID			  9
+	  Ports			  [3, 1]
+	  Position		  [630, 180, 790, 280]
+	  LibraryVersion	  "1.167"
+	  SourceBlock		  "RateBasedLib/Shunting Neuron"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  A			  "A"
+	  B			  "B"
+	  tau			  "tau"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Signal Function"
+	  SID			  10
+	  Ports			  [1, 1]
+	  Position		  [820, 194, 895, 266]
+	  AttributesFormatString  "%<BlockChoice>"
+	  BlockChoice		  "Sigmoid-SF"
+	  TemplateBlock		  "RateBasedLib/Signal Function"
+	  MemberBlocks		  "Faster-SF,Linear-SF,Sigmoid-SF,Sigmoid-To-Linear-SF,Slower-SF"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Signal Function"
+	    Location		    [148, 182, 646, 482]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    88
+	    SIDPrevWatermark	    88
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X"
+	      SID		      31
+	      Position		      [20, 40, 40, 60]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sigmoid-SF"
+	      SID		      18
+	      Ports		      [1, 1]
+	      Position		      [100, 40, 140, 80]
+	      LibraryVersion	      "1.167"
+	      FontName		      "Arial"
+	      SourceBlock	      "RateBasedLib/Sigmoid-SF"
+	      SourceType	      ""
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      threshold		      "0.3"
+	      slope		      "9"
+	      asymptote		      "1"
+	      ground		      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Y"
+	      SID		      33
+	      Position		      [200, 40, 220, 60]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "X"
+	      SrcPort		      1
+	      DstBlock		      "Sigmoid-SF"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sigmoid-SF"
+	      SrcPort		      1
+	      DstBlock		      "Y"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Inhibition"
+	  SID			  11
+	  Position		  [630, 128, 660, 142]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PreSF, x"
+	  SID			  12
+	  Position		  [935, 118, 965, 132]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PostSF, f(x)"
+	  SID			  13
+	  Position		  [940, 223, 970, 237]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Excitation\nCalc"
+	  SrcPort		  1
+	  DstBlock		  "Recurrent Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Inhibition\nCalc"
+	  SrcPort		  1
+	  DstBlock		  "Inhibitory Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Memory1"
+	  SrcPort		  1
+	  Points		  [-305, 0; 0, -80]
+	  Branch {
+	    DstBlock		    "Inhibition\nCalc"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -90]
+	    DstBlock		    "Excitation\nCalc"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "ExcitConnectivity"
+	  SrcPort		  1
+	  DstBlock		  "Excitation\nCalc"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Function"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, 90]
+	    DstBlock		    "Memory1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "PostSF, f(x)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Shunting Neuron"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Signal Function"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -105]
+	    DstBlock		    "PreSF, x"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Inhibitory Gain"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "Shunting Neuron"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -95]
+	    DstBlock		    "Inhibition"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "I, Input"
+	  SrcPort		  1
+	  Points		  [0, -15]
+	  DstBlock		  "Shunting Neuron"
+	  DstPort		  3
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "DistMat"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 35]
+	    DstBlock		    "InhibConnectivity"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -55]
+	    DstBlock		    "ExcitConnectivity"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "InhibConnectivity"
+	  SrcPort		  1
+	  DstBlock		  "Inhibition\nCalc"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Recurrent Gain"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 55]
+	  DstBlock		  "Shunting Neuron"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}

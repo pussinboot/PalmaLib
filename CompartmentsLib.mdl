@@ -1,0 +1,6045 @@
+Library {
+  Name			  "CompartmentsLib"
+  Version		  7.7
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Wed Aug 12 14:37:06 2009"
+  Creator		  "jpalma"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "jpalma"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Oct 19 15:31:24 2012"
+  RTWModifiedTimeStamp	  272561480
+  ModelVersionFormat	  "1.%<AutoIncrement:442>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  off
+	  BooleanDataType	  off
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"PortableWordSizes"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      FunctionExecutionProfile off
+	      CodeExecutionProfiling  off
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 400, 210, 1280, 840 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Bias
+      Bias		      "0"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Clock
+      DisplayTime	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      InitialCondition
+      Value		      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+      AlgorithmType	      "Newton-Raphson"
+      Iterations	      "3"
+    }
+    Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+      LinearizeMemory	      off
+      LinearizeAsDelay	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "CompartmentsLib"
+    Location		    [386, 261, 1294, 788]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "2604"
+    Block {
+      BlockType		      SubSystem
+      Name		      "ActiveCompartment"
+      SID		      "355"
+      Ports		      [3, 5]
+      Position		      [270, 193, 380, 267]
+      FontName		      "Arial"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Capacitance, C|Initial Voltage, V0|Axial Conductance, gA|Comp Diameter, d|Comp Length, L"
+      "|Na Conductance, gNa|Na Eq Voltage, ENa|K Conductance, gK|K Eq Voltage, EK|Leak Conductance, gL|Leak Eq Voltage,"
+      " EL"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "C=@1;V0=@2;gA=@3;d=@4;L=@5;gNa=@6;ENa=@7;gK=@8;EK=@9;gL=@10;EL=@11;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on"
+      MaskDisplay	      "image(imread('../Libs/icons/Compartment.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "PSoma1(1)|PSoma1(2)|PSoma1(9)|PSoma1(10)|PSoma1(11)|PSoma1(3)|PSoma1(4)|PSoma1(5)|PSoma1("
+      "6)|PSoma1(7)|PSoma1(8)"
+      MaskTabNameString	      "Basics,Basics,Basics,Basics,Basics,Currents,Currents,Currents,Currents,Currents,Currents"
+      System {
+	Name			"ActiveCompartment"
+	Location		[544, 381, 1441, 930]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "v-"
+	  SID			  "1404"
+	  Position		  [765, 308, 795, 322]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "v+"
+	  SID			  "1405"
+	  Position		  [765, 348, 795, 362]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "1406"
+	  Position		  [465, 393, 495, 407]
+	  BlockMirror		  on
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Capacitance"
+	  SID			  "1407"
+	  Position		  [240, 268, 285, 312]
+	  BlockMirror		  on
+	  Gain			  "1/C"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Compare"
+	  SID			  "1408"
+	  Ports			  [4, 1]
+	  Position		  [730, 309, 740, 381]
+	  BlockMirror		  on
+	  Inputs		  "+-+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "1409"
+	  Position		  [610, 315, 705, 375]
+	  BlockMirror		  on
+	  Gain			  "(gA*d)/(4*L^2)"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "K Current, IK"
+	  SID			  "1410"
+	  Ports			  [1, 1]
+	  Position		  [435, 202, 520, 268]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1058"
+	  SourceBlock		  "CurrentsLib/K Current, IK"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  EK			  "EK"
+	  gK			  "gK"
+	  n_a			  "n3_alpha"
+	  n_b			  "n3_beta"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Leak Current, IL"
+	  SID			  "1411"
+	  Ports			  [1, 1]
+	  Position		  [530, 258, 615, 322]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1058"
+	  SourceBlock		  "CurrentsLib/Ungated Current"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  EX			  "EL"
+	  gX			  "gL"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Na Current, INa"
+	  SID			  "1412"
+	  Ports			  [1, 1]
+	  Position		  [340, 148, 425, 212]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1058"
+	  SourceBlock		  "CurrentsLib/Na Current, INa"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  ENa			  "ENa"
+	  gNa			  "gNa"
+	  m_a			  "m3_alpha"
+	  m_b			  "m3_beta"
+	  h_a			  "h3_alpha"
+	  h_b			  "h3_beta"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "1413"
+	  Ports			  [5, 1]
+	  Position		  [305, 154, 315, 426]
+	  BlockMirror		  on
+	  Inputs		  "+++++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "VIntegrate"
+	  SID			  "1414"
+	  Ports			  [1, 1]
+	  Position		  [180, 270, 215, 310]
+	  BlockMirror		  on
+	  InitialCondition	  "V0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "1415"
+	  Position		  [105, 435, 120, 465]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "INa"
+	  SID			  "1416"
+	  Position		  [270, 190, 285, 220]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IK"
+	  SID			  "1417"
+	  Position		  [360, 240, 375, 270]
+	  BlockMirror		  on
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IL"
+	  SID			  "1418"
+	  Position		  [360, 295, 375, 325]
+	  BlockMirror		  on
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Iinter"
+	  SID			  "1419"
+	  Position		  [360, 355, 375, 385]
+	  BlockMirror		  on
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "K Current, IK"
+	  SrcPort		  1
+	  Points		  [-35, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "IK"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Na Current, INa"
+	  SrcPort		  1
+	  Points		  [-5, 0]
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "INa"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [-215, 0]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    4
+	  }
+	  Branch {
+	    DstBlock		    "Iinter"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "VIntegrate"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, 160]
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [660, 0; 0, -75]
+	    Branch {
+	      Points		      [0, -40]
+	      Branch {
+		Points			[0, -45; -175, 0]
+		Branch {
+		  Points		  [0, -55; -95, 0]
+		  Branch {
+		    Points		    [0, -55]
+		    DstBlock		    "Na Current, INa"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "K Current, IK"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  DstBlock		  "Leak Current, IL"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		DstBlock		"Compare"
+		DstPort			2
+	      }
+	    }
+	    Branch {
+	      DstBlock		      "Compare"
+	      DstPort		      4
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Capacitance"
+	  SrcPort		  1
+	  DstBlock		  "VIntegrate"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Capacitance"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Leak Current, IL"
+	  SrcPort		  1
+	  Points		  [-130, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "IL"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "v-"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "v+"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  3
+	}
+	Annotation {
+	  Name			  "C dV/dt =  I_{Na} + I_K + I_L + I_{inter} + I_{suppl}"
+	  Position		  [461, 67]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "C dV/dt =  g_{Na} m^3 h (E_{Na} - V) + g_K n^4 (E_K - V) + gL (E_L - V) + (g_Ad / 4L^2) * (V_{prev} - V +"
+	  " V_{next} - V) + I_{additonal}"
+	  Position		  [456, 107]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "ActiveEndCompartment"
+      SID		      "291"
+      Ports		      [2, 5]
+      Position		      [270, 94, 380, 166]
+      FontName		      "Arial"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Capacitance, C|Initial Voltage, V0|Axial Conductance, gA|Comp Diameter, d|Comp Length, L"
+      "|Na Conductance, gNa|Na Eq Voltage, ENa|K Conductance, gK|K Eq Voltage, EK|Leak Conductance, gL|Leak Eq Voltage,"
+      " EL"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "C=@1;V0=@2;gA=@3;d=@4;L=@5;gNa=@6;ENa=@7;gK=@8;EK=@9;gL=@10;EL=@11;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on"
+      MaskDisplay	      "image(imread('../Libs/icons/Compartment.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "C|V0|gA|d|L|gNa|ENa|gK|EK|gL|EL"
+      MaskTabNameString	      "Basic,Basic,Basic,Basic,Basic,Currents,Currents,Currents,Currents,Currents,Currents"
+      System {
+	Name			"ActiveEndCompartment"
+	Location		[307, 336, 1204, 885]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "v-"
+	  SID			  "292"
+	  Position		  [775, 323, 805, 337]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "293"
+	  Position		  [465, 393, 495, 407]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Capacitance"
+	  SID			  "301"
+	  Position		  [240, 268, 285, 312]
+	  BlockMirror		  on
+	  Gain			  "1/C"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Compare"
+	  SID			  "344"
+	  Ports			  [2, 1]
+	  Position		  [730, 316, 745, 374]
+	  BlockMirror		  on
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "302"
+	  Position		  [610, 315, 705, 375]
+	  BlockMirror		  on
+	  Gain			  "(gA*d)/(4*L^2)"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "K Current, IK"
+	  SID			  "353"
+	  Ports			  [1, 1]
+	  Position		  [435, 202, 520, 268]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1058"
+	  SourceBlock		  "CurrentsLib/K Current, IK"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  EK			  "EK"
+	  gK			  "gK"
+	  n_a			  "n3_alpha"
+	  n_b			  "n3_beta"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Leak Current, IL"
+	  SID			  "354"
+	  Ports			  [1, 1]
+	  Position		  [530, 258, 615, 322]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1058"
+	  SourceBlock		  "CurrentsLib/Ungated Current"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  EX			  "EL"
+	  gX			  "gL"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Na Current, INa"
+	  SID			  "352"
+	  Ports			  [1, 1]
+	  Position		  [340, 148, 425, 212]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1058"
+	  SourceBlock		  "CurrentsLib/Na Current, INa"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  ENa			  "ENa"
+	  gNa			  "gNa"
+	  m_a			  "m3_alpha"
+	  m_b			  "m3_beta"
+	  h_a			  "h3_alpha"
+	  h_b			  "h3_beta"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "345"
+	  Ports			  [5, 1]
+	  Position		  [305, 154, 315, 426]
+	  BlockMirror		  on
+	  Inputs		  "+++++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "VIntegrate"
+	  SID			  "346"
+	  Ports			  [1, 1]
+	  Position		  [180, 270, 215, 310]
+	  BlockMirror		  on
+	  InitialCondition	  "V0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "347"
+	  Position		  [105, 435, 120, 465]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "INa"
+	  SID			  "348"
+	  Position		  [270, 190, 285, 220]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IK"
+	  SID			  "349"
+	  Position		  [360, 240, 375, 270]
+	  BlockMirror		  on
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IL"
+	  SID			  "350"
+	  Position		  [360, 295, 375, 325]
+	  BlockMirror		  on
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Iinter"
+	  SID			  "351"
+	  Position		  [360, 355, 375, 385]
+	  BlockMirror		  on
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "v-"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Leak Current, IL"
+	  SrcPort		  1
+	  Points		  [-130, 0]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "IL"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Capacitance"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Capacitance"
+	  SrcPort		  1
+	  DstBlock		  "VIntegrate"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "VIntegrate"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, 160]
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [660, 0; 0, -90]
+	    Branch {
+	      DstBlock		      "Compare"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [0, -70; -175, 0]
+	      Branch {
+		DstBlock		"Leak Current, IL"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -55; -95, 0]
+		Branch {
+		  DstBlock		  "K Current, IK"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, -55]
+		  DstBlock		  "Na Current, INa"
+		  DstPort		  1
+		}
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [-215, 0]
+	  Branch {
+	    DstBlock		    "Iinter"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "Na Current, INa"
+	  SrcPort		  1
+	  Points		  [-5, 0]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "INa"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "K Current, IK"
+	  SrcPort		  1
+	  Points		  [-35, 0]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "IK"
+	    DstPort		    1
+	  }
+	}
+	Annotation {
+	  Name			  "C dV/dt =  g_{Na} m^3 h (E_{Na} - V) + g_K n^4 (E_K - V) + gL (E_L - V) + (g_Ad / 4L^2) * (V_{adj} - V) +"
+	  " I_{additonal}"
+	  Position		  [456, 107]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "C dV/dt =  I_{Na} + I_K + I_L + I_{inter} + I_{suppl}"
+	  Position		  [461, 67]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "ActiveEndCompartmentEx"
+      SID		      "1531"
+      Ports		      [6, 5]
+      Position		      [355, 311, 470, 404]
+      FontName		      "Arial"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Capacitance, C|Initial Voltage, V0|Axial Conductance, gA|Comp Diameter, d|Comp Length, L"
+      "|Leak Conductance, gL|Leak Eq Voltage, EL"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "C=@1;V0=@2;gA=@3;d=@4;L=@5;gL=@6;EL=@7;"
+      MaskTunableValueString  "on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on"
+      MaskDisplay	      "image(imread('../Libs/icons/Compartment.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "C|V0|gA|d|L|gL|EL"
+      MaskTabNameString	      "Basic,Basic,Basic,Basic,Basic,Currents,Currents"
+      System {
+	Name			"ActiveEndCompartmentEx"
+	Location		[256, 415, 1153, 964]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "v-"
+	  SID			  "1532"
+	  Position		  [750, 323, 780, 337]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "1533"
+	  Position		  [440, 393, 470, 407]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "ENa"
+	  SID			  "1549"
+	  Position		  [465, 173, 495, 187]
+	  BlockMirror		  on
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "gNa"
+	  SID			  "1550"
+	  Position		  [435, 193, 465, 207]
+	  BlockMirror		  on
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "EK"
+	  SID			  "1551"
+	  Position		  [625, 228, 655, 242]
+	  BlockMirror		  on
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "gK"
+	  SID			  "1552"
+	  Position		  [590, 248, 620, 262]
+	  BlockMirror		  on
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Capacitance"
+	  SID			  "1534"
+	  Position		  [215, 268, 260, 312]
+	  BlockMirror		  on
+	  Gain			  "1/C"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Compare"
+	  SID			  "1535"
+	  Ports			  [2, 1]
+	  Position		  [720, 316, 735, 374]
+	  BlockMirror		  on
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "1536"
+	  Position		  [440, 315, 535, 375]
+	  BlockMirror		  on
+	  Gain			  "(gA*d)/(4*L^2)"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "K Current Ex, IK"
+	  SID			  "1548"
+	  Ports			  [3, 1]
+	  Position		  [480, 204, 575, 266]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1090"
+	  SourceBlock		  "CurrentsLib/K Current Ex, IK"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  n_a			  "n3_alpha"
+	  n_b			  "n3_beta"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Leak Current, IL"
+	  SID			  "1538"
+	  Ports			  [1, 1]
+	  Position		  [625, 258, 710, 322]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1090"
+	  SourceBlock		  "CurrentsLib/Ungated Current"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  EX			  "EL"
+	  gX			  "gL"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Na Current Ex, INa"
+	  SID			  "1547"
+	  Ports			  [3, 1]
+	  Position		  [310, 150, 415, 210]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1090"
+	  SourceBlock		  "CurrentsLib/Na Current Ex, INa"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  m_a			  "m3_alpha"
+	  m_b			  "m3_beta"
+	  h_a			  "h3_alpha"
+	  h_b			  "h3_beta"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "1540"
+	  Ports			  [5, 1]
+	  Position		  [280, 154, 290, 426]
+	  BlockMirror		  on
+	  Inputs		  "+++++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "VIntegrate"
+	  SID			  "1541"
+	  Ports			  [1, 1]
+	  Position		  [155, 270, 190, 310]
+	  BlockMirror		  on
+	  InitialCondition	  "V0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "1542"
+	  Position		  [80, 435, 95, 465]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "INa"
+	  SID			  "1543"
+	  Position		  [245, 190, 260, 220]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IK"
+	  SID			  "1544"
+	  Position		  [335, 240, 350, 270]
+	  BlockMirror		  on
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IL"
+	  SID			  "1545"
+	  Position		  [335, 295, 350, 325]
+	  BlockMirror		  on
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Iinter"
+	  SID			  "1546"
+	  Position		  [335, 355, 350, 385]
+	  BlockMirror		  on
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "K Current Ex, IK"
+	  SrcPort		  1
+	  Points		  [-105, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "IK"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Na Current Ex, INa"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "INa"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [-70, 0]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    4
+	  }
+	  Branch {
+	    DstBlock		    "Iinter"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "VIntegrate"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, 160]
+	  Branch {
+	    Points		    [660, 0; 0, -90]
+	    Branch {
+	      DstBlock		      "Compare"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [0, -70; -55, 0]
+	      Branch {
+		DstBlock		"Leak Current, IL"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -75; -135, 0]
+		Branch {
+		  DstBlock		  "K Current Ex, IK"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, -55]
+		  DstBlock		  "Na Current Ex, INa"
+		  DstPort		  1
+		}
+	      }
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Capacitance"
+	  SrcPort		  1
+	  DstBlock		  "VIntegrate"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Capacitance"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Leak Current, IL"
+	  SrcPort		  1
+	  Points		  [-250, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "IL"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "v-"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ENa"
+	  SrcPort		  1
+	  DstBlock		  "Na Current Ex, INa"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "gNa"
+	  SrcPort		  1
+	  DstBlock		  "Na Current Ex, INa"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "gK"
+	  SrcPort		  1
+	  DstBlock		  "K Current Ex, IK"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "EK"
+	  SrcPort		  1
+	  DstBlock		  "K Current Ex, IK"
+	  DstPort		  2
+	}
+	Annotation {
+	  Name			  "C dV/dt =  I_{Na} + I_K + I_L + I_{inter} + I_{suppl}"
+	  Position		  [436, 67]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "C dV/dt =  g_{Na} m^3 h (E_{Na} - V) + g_K n^4 (E_K - V) + gL (E_L - V) + (g_Ad / 4L^2) * (V_{adj} - V) +"
+	  " I_{additonal}"
+	  Position		  [431, 107]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compartment"
+      SID		      "63"
+      Ports		      [3, 5]
+      Position		      [205, 307, 320, 393]
+      BlockChoice	      "ActiveEndCompartment"
+      TemplateBlock	      "self"
+      MemberBlocks	      "ActiveCompartment,ActiveEndCompartment,PassiveCompartment,PassiveEndCompartment"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "End Compartment|Active Compartment (Na and K)|Parameters Settings|Capacitance|Initial Vo"
+      "ltage|Na Conductance|Na Eq Voltage|K Conductance|K Eq Voltage|Leak Conductance|Leak Eq Voltage|Axial Conductance"
+      "|Compartment Diameter|Compartment Length"
+      MaskStyleString	      "checkbox,checkbox,popup(Default1|UserDefined),edit,edit,edit,edit,edit,edit,edit,edit,edi"
+      "t,edit,edit"
+      MaskVariables	      "ifEnd=@1;ifActive=@2;settings=@3;C=&4;V0=&5;gNa=&6;ENa=&7;gK=&8;EK=&9;gL=&10;EL=&11;gA=&12;"
+      "d=&13;L=&14;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "|maskStr = get_param(gcb,'MaskValues');\nif strcmp(maskStr{2},'on')\n    set_param(gcb,"
+      "'MaskVisibilities',{'on';'on';'on';'on';'on';'on';'on';'on';'on';'on';'on';'on';'on';'on'});\nelse\n    set_para"
+      "m(gcb,'MaskVisibilities',{'on';'on';'on';'on';'on';'off';'off';'off';'off';'on';'on';'on';'on';'on'});    \nend|"
+      "maskStr = get_param(gcb,'MaskValues');\nif strcmp(maskStr{3},'Default1')\n   maskStr = get_param(gcb,'MaskValues"
+      "');\n   maskStr{4} = '1';\n   maskStr{5} = '-65';\n   maskStr{6} = '45';\n   maskStr{7} = '50';\n   maskStr{8} ="
+      " '16';\n   maskStr{9} = '-100';\n   maskStr{10} = '0.03';\n   maskStr{11} = '-60';\n   maskStr{12} = '0.25';\n  "
+      " maskStr{13} = '0.06';\n   maskStr{14} = '0.4';\n   set_param(gcb, 'MaskValues', maskStr);\nelse\nend|maskStr = "
+      "get_param(gcb,'MaskValues');\nmaskStr{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_"
+      "param(gcb,'MaskValues');\nmaskStr{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_para"
+      "m(gcb,'MaskValues');\nmaskStr{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gc"
+      "b,'MaskValues');\nmaskStr{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'M"
+      "askValues');\nmaskStr{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskV"
+      "alues');\nmaskStr{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValue"
+      "s');\nmaskStr{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');"
+      "\nmaskStr{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nma"
+      "skStr{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskSt"
+      "r{3} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{3}"
+      " = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "maskStr = get_param(gcb,'MaskValues');\nif (ifActive)\n    if (ifEnd)\n        BlockCho"
+      "ice = 'ActiveEndCompartment';\n    else\n        BlockChoice = 'ActiveCompartment';\n    end\nelse\n    if (ifEn"
+      "d)\n        BlockChoice = 'PassiveEndCompartment';\n    else\n        BlockChoice = 'PassiveCompartment';\n    e"
+      "nd\nend\nset_param([gcb], 'BlockChoice', BlockChoice);\n"
+      MaskDisplay	      "image(imread('../Libs/icons/Compartment.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "on|on|UserDefined|1|-65|45|50|16|-100|0.03|-60|0.25|0.06|0.4"
+      MaskTabNameString	      "Basics,Basics,Basics,Basics,Basics,Currents,Currents,Currents,Currents,Currents,Current"
+      "s,Geometry,Geometry,Geometry"
+      System {
+	Name			"Compartment"
+	Location		[148, 182, 646, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "v-"
+	  SID			  "1332"
+	  Position		  [20, 80, 40, 100]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "v+"
+	  SID			  "1333"
+	  Position		  [20, 120, 40, 140]
+	  ForegroundColor	  "yellow"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "1420"
+	  Position		  [20, 120, 40, 140]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ActiveEndCompartment"
+	  SID			  "1208"
+	  Ports			  [2, 5]
+	  Position		  [100, 40, 140, 80]
+	  LibraryVersion	  "1.441"
+	  FontName		  "Arial"
+	  SourceBlock		  "CompartmentsLib/ActiveEndCompartment"
+	  SourceType		  ""
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  C			  "PSoma1(1)"
+	  V0			  "PSoma1(2)"
+	  gA			  "PSoma1(9)"
+	  d			  "PSoma1(10)"
+	  L			  "PSoma1(11)"
+	  gNa			  "PSoma1(3)"
+	  ENa			  "PSoma1(4)"
+	  gK			  "PSoma1(5)"
+	  EK			  "PSoma1(6)"
+	  gL			  "PSoma1(7)"
+	  EL			  "PSoma1(8)"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "term2"
+	  SID			  "2604"
+	  Position		  [60, 80, 80, 100]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "1334"
+	  Position		  [200, 200, 220, 220]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "INa"
+	  SID			  "186"
+	  Position		  [200, 80, 220, 100]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IK"
+	  SID			  "187"
+	  Position		  [200, 120, 220, 140]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IL"
+	  SID			  "381"
+	  Position		  [200, 160, 220, 180]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Iinter"
+	  SID			  "382"
+	  Position		  [200, 200, 220, 220]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "v-"
+	  SrcPort		  1
+	  DstBlock		  "ActiveEndCompartment"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  DstBlock		  "ActiveEndCompartment"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "ActiveEndCompartment"
+	  SrcPort		  1
+	  DstBlock		  "v"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ActiveEndCompartment"
+	  SrcPort		  2
+	  DstBlock		  "INa"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ActiveEndCompartment"
+	  SrcPort		  3
+	  DstBlock		  "IK"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ActiveEndCompartment"
+	  SrcPort		  4
+	  DstBlock		  "IL"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ActiveEndCompartment"
+	  SrcPort		  5
+	  DstBlock		  "Iinter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "v+"
+	  SrcPort		  1
+	  DstBlock		  "term2"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Izhikevich 2003"
+      SID		      "64"
+      Ports		      [1, 3]
+      Position		      [450, 107, 550, 183]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Model from Eugene Izhikevich's 2003 Paper\n    (Equations 1, 2 & 3)\nAlso in Eugene Izhik"
+      "evich's 2004 Paper\n\nSimulink Model Design: Jesse Palma"
+      MaskHelp		      "Model from Eugene Izhikevich's 2003 Paper\n<br>(Equations 1, 2 & 3)\n<br>Also in Eugene Izhikev"
+      "ich's 2004 Paper\n<br><br>\nSimulink Model Design: Jesse Palma"
+      MaskPromptString	      "Parameter Settings|a, recovery u time constant|b, dynamics parameter|c,  reset value v|d"
+      ", reset shift u|P2, 2nd order term|P1, 1st order term|P0, constant term|Vp, voltage peak|V0, initial v value|U0,"
+      " intial u value"
+      MaskStyleString	      "popup(Tonic-Spiking-I04|Phasic-Spiking-I04|Tonic-Bursting-I04|UserDefined),edit,edit,edit"
+      ",edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "settings=@1;A=@2;B=@3;C=@4;D=@5;P2=@6;P1=@7;P0=@8;VP=@9;V0=@10;U0=@11;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "maskStr = get_param(gcb,'MaskValues');\nif strcmp(maskStr{1},'Tonic-Spiking-I04')\n   m"
+      "askStr = get_param(gcb,'MaskValues');\n   maskStr{2} = '0.02'; %A\n   maskStr{3} = '0.2';  %B\n   maskStr{4} = '"
+      "-65';  %C\n   maskStr{5} = '6';    %D\n   maskStr{6} = '0.04'; %P2\n   maskStr{7} = '5';    %P1\n   maskStr{8} ="
+      " '140';  %P0\n   maskStr{9} = '30';   %VP\n   maskStr{10} = '-70'; %V0\n   maskStr{11} = '-20';  %U0\n   set_par"
+      "am(gcb, 'MaskValues', maskStr);\nend\nif strcmp(maskStr{1},'Phasic-Spiking-I04')\n   maskStr = get_param(gcb,'Ma"
+      "skValues');\n   maskStr{2} = '0.02'; %A\n   maskStr{3} = '0.25';  %B\n   maskStr{4} = '-65';  %C\n   maskStr{5} "
+      "= '6';    %D\n   maskStr{6} = '0.04'; %P2\n   maskStr{7} = '5';    %P1\n   maskStr{8} = '140';  %P0\n   maskStr{"
+      "9} = '30';   %VP\n   maskStr{10} = '-70'; %V0\n   maskStr{11} = '-20';  %U0\n   set_param(gcb, 'MaskValues', mas"
+      "kStr);\nend\nif strcmp(maskStr{1},'Tonic-Bursting-I04')\n   maskStr = get_param(gcb,'MaskValues');\n   maskStr{2"
+      "} = '0.02'; %A\n   maskStr{3} = '0.2';  %B\n   maskStr{4} = '-50';  %C\n   maskStr{5} = '2';    %D\n   maskStr{6"
+      "} = '0.04'; %P2\n   maskStr{7} = '5';    %P1\n   maskStr{8} = '140';  %P0\n   maskStr{9} = '30';   %VP\n   maskS"
+      "tr{10} = '-70'; %V0\n   maskStr{11} = '-20';  %U0\n   set_param(gcb, 'MaskValues', maskStr);\nend|maskStr = get_"
+      "param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_para"
+      "m(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gc"
+      "b,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'M"
+      "askValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskV"
+      "alues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValue"
+      "s');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');"
+      "\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nma"
+      "skStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskSt"
+      "r{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1}"
+      " = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "maskStr = get_param(gcb,'MaskValues');"
+      MaskDisplay	      "image(imread('../Libs/icons/Izhik.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "UserDefined|0.02|0.2|-65|8|0.04|5|140|30|-70|-20"
+      System {
+	Name			"Izhikevich 2003"
+	Location		[1742, 208, 2706, 888]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "65"
+	  Position		  [120, 188, 150, 202]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "\nInitial"
+	  SID			  "66"
+	  Position		  [535, 521, 565, 539]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Value			  "U0"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "A Gain"
+	  SID			  "67"
+	  Position		  [290, 444, 330, 476]
+	  Gain			  "A"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "68"
+	  Ports			  [5, 1]
+	  Position		  [250, 178, 280, 352]
+	  Inputs		  "++++-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "B Gain"
+	  SID			  "69"
+	  Position		  [165, 434, 205, 466]
+	  Gain			  "B"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "70"
+	  Position		  [520, 305, 540, 325]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock2"
+	  SID			  "71"
+	  Position		  [480, 505, 500, 525]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Compare"
+	  SID			  "72"
+	  Ports			  [2, 1]
+	  Position		  [230, 442, 260, 473]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "73"
+	  Position		  [200, 214, 235, 246]
+	  ShowName		  off
+	  Gain			  "P2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  SID			  "74"
+	  Position		  [170, 251, 210, 279]
+	  ShowName		  off
+	  Gain			  "P1"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Over VP?"
+	  SID			  "75"
+	  Ports			  [1, 1]
+	  Position		  [525, 360, 580, 390]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">="
+	  const			  "VP"
+	  LogicOutDataTypeMode	  "boolean"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "P0"
+	  SID			  "76"
+	  Position		  [190, 289, 225, 311]
+	  ShowName		  off
+	  Value			  "P0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Reset, C"
+	  SID			  "77"
+	  Position		  [425, 284, 450, 306]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Value			  "C"
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "Square"
+	  SID			  "78"
+	  Ports			  [1, 1]
+	  Position		  [150, 215, 180, 245]
+	  ShowName		  off
+	  Operator		  "magnitude^2"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  SID			  "79"
+	  Position		  [590, 300, 620, 330]
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  SID			  "80"
+	  Position		  [605, 500, 635, 530]
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  SID			  "81"
+	  Position		  [405, 360, 435, 390]
+	  BlockMirror		  on
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "VR"
+	  SID			  "82"
+	  Position		  [545, 321, 570, 349]
+	  ShowName		  off
+	  Value			  "V0"
+	}
+	Block {
+	  BlockType		  Bias
+	  Name			  "add D"
+	  SID			  "83"
+	  Position		  [530, 480, 570, 510]
+	  NamePlacement		  "alternate"
+	  Bias			  "D"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "toDouble"
+	  SID			  "84"
+	  Position		  [560, 248, 610, 272]
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  InitialCondition
+	  Name			  "u IC"
+	  SID			  "85"
+	  Position		  [310, 570, 340, 610]
+	  BlockMirror		  on
+	  Value			  "U0"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "u Integrator"
+	  SID			  "86"
+	  Ports			  [3, 1]
+	  Position		  [660, 446, 710, 514]
+	  NamePlacement		  "alternate"
+	  ExternalReset		  "falling"
+	  InitialConditionSource  "external"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "u Memory"
+	  SID			  "87"
+	  Position		  [670, 575, 700, 605]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "u Memory1"
+	  SID			  "88"
+	  Position		  [670, 530, 700, 560]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  InitialCondition
+	  Name			  "v IC"
+	  SID			  "89"
+	  Position		  [305, 355, 335, 395]
+	  BlockMirror		  on
+	  Value			  "V0"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "v Integrator"
+	  SID			  "90"
+	  Ports			  [3, 1]
+	  Position		  [655, 219, 715, 301]
+	  NamePlacement		  "alternate"
+	  ExternalReset		  "rising"
+	  InitialConditionSource  "external"
+	  InitialCondition	  "VR"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "v Memory"
+	  SID			  "91"
+	  Position		  [670, 360, 700, 390]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "92"
+	  Position		  [860, 253, 890, 267]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  SID			  "93"
+	  Position		  [865, 473, 895, 487]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "sp"
+	  SID			  "1944"
+	  Position		  [525, 423, 555, 437]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u Memory1"
+	  SrcPort		  1
+	  Points		  [-150, 0]
+	  DstBlock		  "add D"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "add D"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 10]
+	  DstBlock		  "Switch1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P0"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "VR"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Square"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -30]
+	  DstBlock		  "v Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "A Gain"
+	  SrcPort		  1
+	  DstBlock		  "u Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "B Gain"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "A Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Over VP?"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  Branch {
+	    Points		    [0, -115]
+	    DstBlock		    "toDouble"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [-20, 0]
+	    Branch {
+	      DstBlock		      "Switch2"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [0, 55]
+	      DstBlock		      "sp"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "v Memory"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  Branch {
+	    DstBlock		    "Over VP?"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 35; -155, 0]
+	    DstBlock		    "Switch2"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "\nInitial"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -5]
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  DstBlock		  "u Integrator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Clock2"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "u Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [0, 65]
+	    DstBlock		    "u Memory1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [30, 0]
+	    Branch {
+	      Points		      [0, 110]
+	      DstBlock		      "u Memory"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "u"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Reset, C"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    Points		    [0, 70]
+	    DstBlock		    "Switch2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [95, 0]
+	    DstBlock		    "Switch"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "v Integrator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "v Integrator"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "v Memory"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "toDouble"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 220]
+	    DstBlock		    "u Integrator"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "v Integrator"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  DstBlock		  "v IC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "u Memory"
+	  SrcPort		  1
+	  DstBlock		  "u IC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "v IC"
+	  SrcPort		  1
+	  Points		  [-175, 0]
+	  Branch {
+	    Points		    [0, -110]
+	    Branch {
+	      DstBlock		      "Gain1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -35]
+	      DstBlock		      "Square"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 75]
+	    DstBlock		    "B Gain"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "u IC"
+	  SrcPort		  1
+	  Points		  [-90, 0; 0, -125]
+	  Branch {
+	    Points		    [0, -130]
+	    DstBlock		    "Add"
+	    DstPort		    5
+	  }
+	  Branch {
+	    DstBlock		    "Compare"
+	    DstPort		    2
+	  }
+	}
+	Annotation {
+	  Name			  "dv/dt =  I + P2*v^2 +P1*v + P0 - u"
+	  Position		  [266, 107]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "du/dt = a(bv - u)"
+	  Position		  [261, 137]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "if v>= Vp, then\nv=c, u=u+d"
+	  Position		  [581, 117]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "Dynamics"
+	  Position		  [256, 67]
+	  ForegroundColor	  "blue"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "Threshold Reset"
+	  Position		  [586, 67]
+	  ForegroundColor	  "blue"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Izhikevich Book"
+      SID		      "94"
+      Ports		      [1, 3]
+      Position		      [580, 108, 685, 182]
+      LibraryVersion	      "*1.440"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Model from Eugene Izhikevich's book \"Dynamical Systems in Neuroscience\"\n    (Equations"
+      " 8.5 & 8.6 on page 273)\n9 Paramters are reducable to 4-parameter model.\n\nSimulink Model Design: Jesse Palma"
+      MaskHelp		      "Model from Eugene Izhikevich's book \n<a href=http://www.izhikevich.org/publications/dsn/index."
+      "htm>\"Dynamical Systems in Neuroscience\"</a>\n<br>(Equations 8.5 & 8.6 on page 273)<br>\n9 Paramters are reduca"
+      "ble to 4-parameter model.\n<br><br>\nSimulink Model Design: Jesse Palma"
+      MaskPromptString	      "Parameter Settings|a, recovery u time constant|b, dynamics parameter|c,  reset value v|d"
+      ", reset shift u|Cp, capacitance|k|Vr, voltage rest|Vt, voltage threshold|Vpeak, voltage peak reset|V0, initial v"
+      " value|U0, initial u value"
+      MaskStyleString	      "popup(Regular-Spiking(p274-283)|Motor(p287)|UserDefined),edit,edit,edit,edit,edit,edit,ed"
+      "it,edit,edit,edit,edit"
+      MaskVariables	      "settings=@1;A=@2;B=@3;C=@4;D=@5;CP=@6;K=@7;VR=@8;VT=@9;VP=@10;V0=@11;U0=@12;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "maskStr = get_param(gcb,'MaskValues');\nif strcmp(maskStr{1},'Regular-Spiking(p274-283)"
+      "')\n   maskStr = get_param(gcb,'MaskValues');\n   maskStr{2} = '0.03'; %A\n   maskStr{3} = '-2';   %B\n   maskSt"
+      "r{4} = '-50';  %C\n   maskStr{5} = '100';  %D\n   maskStr{6} = '100';  %CP\n   maskStr{7} = '0.7';  %K\n   maskS"
+      "tr{8} = '-60';  %VR\n   maskStr{9} = '-40';  %VT\n   maskStr{10} = '35';  %VP\n   maskStr{11} = '-60'; %V0\n   m"
+      "askStr{12} = '0';   %U0\n   set_param(gcb, 'MaskValues', maskStr);\nend\nif strcmp(maskStr{1},'Motor(p287)')\n  "
+      " maskStr = get_param(gcb,'MaskValues');\n   maskStr{2} = '0.01'; %A\n   maskStr{3} = '-0.25';%B\n   maskStr{4} ="
+      " '-40';  %C\n   maskStr{5} = '90';   %D\n   maskStr{6} = '30';   %CP\n   maskStr{7} = '3';    %K\n   maskStr{8} "
+      "= '-55';  %VR\n   maskStr{9} = '-42';  %VT\n   maskStr{10} = '10';  %VP\n   maskStr{11} = '-55'; %V0\n   maskStr"
+      "{12} = '0';   %U0\n   set_param(gcb, 'MaskValues', maskStr);\nend|maskStr = get_param(gcb,'MaskValues');\nmaskSt"
+      "r{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1}"
+      " = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = '"
+      "UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'User"
+      "Defined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefi"
+      "ned';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined'"
+      ";\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\ns"
+      "et_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_p"
+      "aram(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param"
+      "(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb"
+      ", 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'M"
+      "askValues', maskStr);"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskDisplay	      "image(imread('../Libs/icons/Izhik.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "UserDefined|0.03|-2|-50|100|100|0.7|-60|-40|35|-60|0"
+      System {
+	Name			"Izhikevich Book"
+	Location		[2, 93, 1331, 748]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "190"
+	  Position		  [115, 238, 145, 252]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "\nInitial"
+	  SID			  "191"
+	  Position		  [590, 556, 620, 574]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Value			  "U0"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "A Gain"
+	  SID			  "192"
+	  Position		  [375, 479, 415, 511]
+	  Gain			  "A"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "193"
+	  Ports			  [3, 1]
+	  Position		  [305, 282, 330, 318]
+	  Inputs		  "++-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "B Gain"
+	  SID			  "194"
+	  Position		  [210, 469, 250, 501]
+	  Gain			  "B"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Capacitance"
+	  SID			  "195"
+	  Position		  [300, 230, 330, 260]
+	  Value			  "CP"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "196"
+	  Position		  [570, 340, 590, 360]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock2"
+	  SID			  "197"
+	  Position		  [535, 540, 555, 560]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Compare"
+	  SID			  "198"
+	  Ports			  [2, 1]
+	  Position		  [305, 477, 335, 508]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Bias
+	  Name			  "Compare VR"
+	  SID			  "199"
+	  Position		  [205, 375, 245, 405]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Bias			  "-VR"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Bias
+	  Name			  "Compare VT"
+	  SID			  "200"
+	  Position		  [205, 425, 245, 455]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Bias			  "-VT"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide"
+	  SID			  "201"
+	  Ports			  [2, 1]
+	  Position		  [380, 252, 410, 283]
+	  Inputs		  "/*"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "K Gain"
+	  SID			  "202"
+	  Position		  [205, 284, 245, 316]
+	  Gain			  "K"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Over Vp?"
+	  SID			  "203"
+	  Ports			  [1, 1]
+	  Position		  [580, 400, 635, 430]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">="
+	  const			  "VP"
+	  LogicOutDataTypeMode	  "boolean"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "204"
+	  Ports			  [2, 1]
+	  Position		  [130, 397, 160, 428]
+	  BlockMirror		  on
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Reset, C"
+	  SID			  "205"
+	  Position		  [460, 319, 485, 341]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Value			  "C"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  SID			  "206"
+	  Position		  [645, 335, 675, 365]
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  SID			  "207"
+	  Position		  [660, 535, 690, 565]
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  SID			  "208"
+	  Position		  [460, 400, 490, 430]
+	  BlockMirror		  on
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "VR"
+	  SID			  "209"
+	  Position		  [600, 365, 625, 385]
+	  ShowName		  off
+	  Value			  "V0"
+	}
+	Block {
+	  BlockType		  Bias
+	  Name			  "add D"
+	  SID			  "210"
+	  Position		  [585, 515, 625, 545]
+	  NamePlacement		  "alternate"
+	  Bias			  "D"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "toDouble"
+	  SID			  "211"
+	  Position		  [615, 283, 665, 307]
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  InitialCondition
+	  Name			  "u IC"
+	  SID			  "212"
+	  Position		  [320, 621, 350, 659]
+	  BlockMirror		  on
+	  Value			  "U0"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "u Integrator"
+	  SID			  "213"
+	  Ports			  [3, 1]
+	  Position		  [715, 481, 765, 549]
+	  NamePlacement		  "alternate"
+	  ExternalReset		  "rising"
+	  InitialConditionSource  "external"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "u Memory"
+	  SID			  "214"
+	  Position		  [725, 625, 755, 655]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "u Memory1"
+	  SID			  "215"
+	  Position		  [715, 570, 745, 600]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  InitialCondition
+	  Name			  "v IC"
+	  SID			  "216"
+	  Position		  [320, 395, 350, 435]
+	  BlockMirror		  on
+	  Value			  "V0"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "v Integrator"
+	  SID			  "217"
+	  Ports			  [3, 1]
+	  Position		  [710, 255, 770, 335]
+	  NamePlacement		  "alternate"
+	  ExternalReset		  "rising"
+	  InitialConditionSource  "external"
+	  InitialCondition	  "VR"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "v Memory"
+	  SID			  "218"
+	  Position		  [725, 400, 755, 430]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "219"
+	  Position		  [860, 288, 890, 302]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  SID			  "220"
+	  Position		  [860, 508, 890, 522]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "sp"
+	  SID			  "1942"
+	  Position		  [580, 463, 610, 477]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Over Vp?"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  Branch {
+	    Points		    [0, -120]
+	    DstBlock		    "toDouble"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Switch2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [5, 0]
+	    DstBlock		    "sp"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "v Memory"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  Branch {
+	    DstBlock		    "Over Vp?"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 35; -155, 0]
+	    DstBlock		    "Switch2"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  DstBlock		  "v IC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "\nInitial"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -5]
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "add D"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 10]
+	  DstBlock		  "Switch1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  DstBlock		  "u Integrator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Clock2"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "A Gain"
+	  SrcPort		  1
+	  DstBlock		  "u Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Divide"
+	  SrcPort		  1
+	  DstBlock		  "v Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "u Integrator"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Points		    [40, 0]
+	    Branch {
+	      Points		      [0, 125]
+	      DstBlock		      "u Memory"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "u"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [0, 70]
+	    DstBlock		    "u Memory1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Reset, C"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [125, 0]
+	    DstBlock		    "Switch"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Switch2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "v Integrator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "u IC"
+	  SrcPort		  1
+	  Points		  [-30, 0; 0, -140]
+	  Branch {
+	    DstBlock		    "Compare"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -190]
+	    DstBlock		    "Add"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "v IC"
+	  SrcPort		  1
+	  Points		  [-45, 0]
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "Compare VR"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "Compare VT"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "A Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "B Gain"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "u Memory"
+	  SrcPort		  1
+	  DstBlock		  "u IC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [0, -115]
+	  DstBlock		  "K Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  Points		  [115, 0; 0, 45]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare VR"
+	  SrcPort		  1
+	  Points		  [-10, 0; 0, 15; -10, 0]
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 80]
+	    DstBlock		    "B Gain"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare VT"
+	  SrcPort		  1
+	  Points		  [-10, 0; 0, -20]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "K Gain"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "v Integrator"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 120]
+	    DstBlock		    "v Memory"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "toDouble"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 220]
+	    DstBlock		    "u Integrator"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "v Integrator"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Divide"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Capacitance"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Divide"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "VR"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "u Memory1"
+	  SrcPort		  1
+	  Points		  [-140, 0]
+	  DstBlock		  "add D"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Threshold Reset"
+	  Position		  [661, 87]
+	  ForegroundColor	  "blue"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "Dynamics"
+	  Position		  [331, 87]
+	  ForegroundColor	  "blue"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "if v>= V_p, then\nv=c, u=u+d"
+	  Position		  [656, 132]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "du/dt = a(b (v - v_r) - u)"
+	  Position		  [331, 157]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "C dv/dt = k(v - v_r) (v - v_t) - u + I"
+	  Position		  [331, 122]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Izhikevich Book Tunable "
+      SID		      "1809"
+      Ports		      [5, 3]
+      Position		      [680, 283, 785, 357]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Model from Eugene Izhikevich's book \"Dynamical Systems in Neuroscience\"\n    (Equations"
+      " 8.5 & 8.6 on page 273)\n9 Paramters are reducable to 4-parameter model.\n\nSimulink Model Design: Jesse Palma"
+      MaskHelp		      "Model from Eugene Izhikevich's book \n<a href=http://www.izhikevich.org/publications/dsn/index."
+      "htm>\"Dynamical Systems in Neuroscience\"</a>\n<br>(Equations 8.5 & 8.6 on page 273)<br>\n9 Paramters are reduca"
+      "ble to 4-parameter model.\n<br><br>\nSimulink Model Design: Jesse Palma"
+      MaskPromptString	      "Parameter Settings|a, recovery u time constant|b, dynamics parameter|c,  reset value v|d"
+      ", reset shift u|Cp, capacitance|k|Vr, voltage rest|Vt, voltage threshold|Vpeak, voltage peak reset|V0, initial v"
+      " value|U0, initial u value"
+      MaskStyleString	      "popup(Regular-Spiking(p274-283)|Motor(p287)|UserDefined),edit,edit,edit,edit,edit,edit,ed"
+      "it,edit,edit,edit,edit"
+      MaskVariables	      "settings=@1;A=@2;B=@3;C=@4;D=@5;CP=@6;K=@7;VR=@8;VT=@9;VP=@10;V0=@11;U0=@12;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "maskStr = get_param(gcb,'MaskValues');\nif strcmp(maskStr{1},'Regular-Spiking(p274-283)"
+      "')\n   maskStr = get_param(gcb,'MaskValues');\n   maskStr{2} = '0.03'; %A\n   maskStr{3} = '-2';   %B\n   maskSt"
+      "r{4} = '-50';  %C\n   maskStr{5} = '100';  %D\n   maskStr{6} = '100';  %CP\n   maskStr{7} = '0.7';  %K\n   maskS"
+      "tr{8} = '-60';  %VR\n   maskStr{9} = '-40';  %VT\n   maskStr{10} = '35';  %VP\n   maskStr{11} = '-60'; %V0\n   m"
+      "askStr{12} = '0';   %U0\n   set_param(gcb, 'MaskValues', maskStr);\nend\nif strcmp(maskStr{1},'Motor(p287)')\n  "
+      " maskStr = get_param(gcb,'MaskValues');\n   maskStr{2} = '0.01'; %A\n   maskStr{3} = '-0.25';%B\n   maskStr{4} ="
+      " '-40';  %C\n   maskStr{5} = '90';   %D\n   maskStr{6} = '30';   %CP\n   maskStr{7} = '3';    %K\n   maskStr{8} "
+      "= '-55';  %VR\n   maskStr{9} = '-42';  %VT\n   maskStr{10} = '10';  %VP\n   maskStr{11} = '-55'; %V0\n   maskStr"
+      "{12} = '0';   %U0\n   set_param(gcb, 'MaskValues', maskStr);\nend|maskStr = get_param(gcb,'MaskValues');\nmaskSt"
+      "r{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1}"
+      " = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = '"
+      "UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'User"
+      "Defined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefi"
+      "ned';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined'"
+      ";\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\ns"
+      "et_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_p"
+      "aram(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param"
+      "(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb"
+      ", 'MaskValues', maskStr);|maskStr = get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'M"
+      "askValues', maskStr);"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskDisplay	      "image(imread('../Libs/icons/Izhik.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "UserDefined|0.03|-2|-50|100|100|0.7|-60|-40|35|-60|0"
+      System {
+	Name			"Izhikevich Book Tunable "
+	Location		[570, 162, 1556, 923]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "1810"
+	  Position		  [115, 193, 145, 207]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "A"
+	  SID			  "1841"
+	  Position		  [345, 523, 375, 537]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "B"
+	  SID			  "1842"
+	  Position		  [180, 498, 210, 512]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "C"
+	  SID			  "1843"
+	  Position		  [460, 323, 490, 337]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "D"
+	  SID			  "1844"
+	  Position		  [475, 508, 505, 522]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "\nInitial"
+	  SID			  "1811"
+	  Position		  [595, 561, 625, 579]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Value			  "U0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "1813"
+	  Ports			  [3, 1]
+	  Position		  [305, 282, 330, 318]
+	  Inputs		  "++-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Capacitance"
+	  SID			  "1815"
+	  Position		  [300, 225, 330, 255]
+	  Value			  "CP"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "1816"
+	  Position		  [570, 340, 590, 360]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock2"
+	  SID			  "1817"
+	  Position		  [565, 540, 585, 560]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Compare"
+	  SID			  "1818"
+	  Ports			  [2, 1]
+	  Position		  [305, 478, 330, 507]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Bias
+	  Name			  "Compare VR"
+	  SID			  "1819"
+	  Position		  [205, 375, 245, 405]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Bias			  "-VR"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Bias
+	  Name			  "Compare VT"
+	  SID			  "1820"
+	  Position		  [205, 425, 245, 455]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Bias			  "-VT"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide"
+	  SID			  "1821"
+	  Ports			  [2, 1]
+	  Position		  [380, 252, 410, 283]
+	  Inputs		  "/*"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "K Gain"
+	  SID			  "1822"
+	  Position		  [205, 284, 245, 316]
+	  Gain			  "K"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Over Vp?"
+	  SID			  "1823"
+	  Ports			  [1, 1]
+	  Position		  [580, 400, 635, 430]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">="
+	  const			  "VP"
+	  LogicOutDataTypeMode	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "1824"
+	  Ports			  [2, 1]
+	  Position		  [130, 396, 150, 429]
+	  BlockMirror		  on
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  SID			  "1826"
+	  Position		  [645, 335, 675, 365]
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  SID			  "1827"
+	  Position		  [650, 535, 680, 565]
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  SID			  "1828"
+	  Position		  [460, 400, 490, 430]
+	  BlockMirror		  on
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "VR"
+	  SID			  "1829"
+	  Position		  [600, 365, 625, 385]
+	  ShowName		  off
+	  Value			  "V0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "add"
+	  SID			  "1847"
+	  Ports			  [2, 1]
+	  Position		  [535, 508, 560, 537]
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "mult"
+	  SID			  "1845"
+	  Ports			  [2, 1]
+	  Position		  [400, 487, 420, 518]
+	  Inputs		  "**"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "mult1"
+	  SID			  "1846"
+	  Ports			  [2, 1]
+	  Position		  [240, 467, 260, 498]
+	  Inputs		  "**"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "toDouble"
+	  SID			  "1831"
+	  Position		  [615, 283, 665, 307]
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  InitialCondition
+	  Name			  "u IC"
+	  SID			  "1832"
+	  Position		  [320, 621, 350, 659]
+	  BlockMirror		  on
+	  Value			  "U0"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "u Integrator"
+	  SID			  "1833"
+	  Ports			  [3, 1]
+	  Position		  [705, 481, 755, 549]
+	  NamePlacement		  "alternate"
+	  ExternalReset		  "rising"
+	  InitialConditionSource  "external"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "u Memory"
+	  SID			  "1834"
+	  Position		  [725, 625, 755, 655]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "u Memory1"
+	  SID			  "1835"
+	  Position		  [705, 570, 735, 600]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  InitialCondition
+	  Name			  "v IC"
+	  SID			  "1836"
+	  Position		  [320, 395, 350, 435]
+	  BlockMirror		  on
+	  Value			  "V0"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "v Integrator"
+	  SID			  "1837"
+	  Ports			  [3, 1]
+	  Position		  [710, 255, 770, 335]
+	  NamePlacement		  "alternate"
+	  ExternalReset		  "rising"
+	  InitialConditionSource  "external"
+	  InitialCondition	  "VR"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "v Memory"
+	  SID			  "1838"
+	  Position		  [725, 400, 755, 430]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "1839"
+	  Position		  [860, 288, 890, 302]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  SID			  "1840"
+	  Position		  [865, 508, 895, 522]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "sp"
+	  SID			  "1945"
+	  Position		  [575, 463, 605, 477]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Over Vp?"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  Branch {
+	    Points		    [0, -120]
+	    DstBlock		    "toDouble"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 0]
+	    Branch {
+	      DstBlock		      "Switch2"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "sp"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "v Memory"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  Branch {
+	    DstBlock		    "Over Vp?"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 35; -155, 0]
+	    DstBlock		    "Switch2"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  DstBlock		  "v IC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "\nInitial"
+	  SrcPort		  1
+	  Points		  [0, -10]
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "add"
+	  SrcPort		  1
+	  Points		  [70, 0]
+	  DstBlock		  "Switch1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  DstBlock		  "u Integrator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Clock2"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "mult"
+	  SrcPort		  1
+	  Points		  [0, -10]
+	  DstBlock		  "u Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Divide"
+	  SrcPort		  1
+	  DstBlock		  "v Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "u Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [40, 0]
+	    Branch {
+	      Points		      [0, 125]
+	      DstBlock		      "u Memory"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "u"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [0, 70]
+	    DstBlock		    "u Memory1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "C"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [125, 0]
+	    DstBlock		    "Switch"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Switch2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "v Integrator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "u IC"
+	  SrcPort		  1
+	  Points		  [-30, 0; 0, -140]
+	  Branch {
+	    DstBlock		    "Compare"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -190]
+	    DstBlock		    "Add"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "v IC"
+	  SrcPort		  1
+	  Points		  [-45, 0]
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "Compare VR"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "Compare VT"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "mult1"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "u Memory"
+	  SrcPort		  1
+	  DstBlock		  "u IC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [0, -110]
+	  DstBlock		  "K Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  Points		  [115, 0; 0, 90]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare VR"
+	  SrcPort		  1
+	  Points		  [-10, 0; 0, 15; -10, 0]
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 70]
+	    DstBlock		    "mult1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare VT"
+	  SrcPort		  1
+	  Points		  [-10, 0; 0, -20]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "K Gain"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "v Integrator"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 120]
+	    DstBlock		    "v Memory"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "toDouble"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 220]
+	    DstBlock		    "u Integrator"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "v Integrator"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Divide"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Capacitance"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Divide"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "VR"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "u Memory1"
+	  SrcPort		  1
+	  Points		  [-180, 0]
+	  DstBlock		  "add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "A"
+	  SrcPort		  1
+	  Points		  [0, -20]
+	  DstBlock		  "mult"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "mult"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "B"
+	  SrcPort		  1
+	  Points		  [0, -15]
+	  DstBlock		  "mult1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "D"
+	  SrcPort		  1
+	  DstBlock		  "add"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Threshold Reset"
+	  Position		  [661, 87]
+	  ForegroundColor	  "blue"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "Dynamics"
+	  Position		  [331, 87]
+	  ForegroundColor	  "blue"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "if v>= V_p, then\nv=c, u=u+d"
+	  Position		  [656, 132]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "du/dt = a(b (v - v_r) - u)"
+	  Position		  [331, 157]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "C dv/dt = k(v - v_r) (v - v_t) - u + I"
+	  Position		  [331, 122]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Izhikevich Dimensionless"
+      SID		      "95"
+      Ports		      [1, 3]
+      Position		      [725, 109, 820, 181]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Dimensionless Model from Eugene Izhikevich's book \"Dynamical Systems in Neuroscience\"\n"
+      "    (Equations 8.3 & 8.4 on page 273)\n\nSimulink Model Design: Jesse Palma"
+      MaskHelp		      "Dimensionless Model from Eugene Izhikevich's book \"Dynamical Systems in Neuroscience\"\n    (E"
+      "quations 8.3 & 8.4 on page 273)\n\nSimulink Model Design: Jesse Palma"
+      MaskPromptString	      "Parameter Settings|a, recovery u time constant|b, dynamics parameter|c,  reset value v|d"
+      ", reset shift u|V0, initial v value|U0, initial u value"
+      MaskStyleString	      "popup(Default1|UserDefined),edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "settings=@1;A=@2;B=@3;C=@4;D=@5;V0=@6;U0=@7;"
+      MaskTunableValueString  "on,on,on,on,on,on,on"
+      MaskCallbackString      "maskStr = get_param(gcb,'MaskValues');\nif strcmp(maskStr{1},'Default1')\n   maskStr = "
+      "get_param(gcb,'MaskValues');\n   maskStr{2} = '1';\n   maskStr{3} = '1';\n   maskStr{4} = '1';\n   maskStr{5} = "
+      "'1';\n   maskStr{6} = '0';\n   maskStr{7} = '0';\n   set_param(gcb, 'MaskValues', maskStr);\nelse\nend|maskStr ="
+      " get_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get"
+      "_param(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_par"
+      "am(gcb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(g"
+      "cb,'MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'"
+      "MaskValues');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);|maskStr = get_param(gcb,'Mask"
+      "Values');\nmaskStr{1} = 'UserDefined';\nset_param(gcb, 'MaskValues', maskStr);"
+      MaskEnableString	      "on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on"
+      MaskInitialization      "maskStr = get_param(gcb,'MaskValues');"
+      MaskDisplay	      "image(imread('../Libs/icons/Izhik.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "UserDefined|1|1|1|1|0|0"
+      System {
+	Name			"Izhikevich Dimensionless"
+	Location		[296, 198, 1258, 877]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "221"
+	  Position		  [120, 213, 150, 227]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "\nInitial"
+	  SID			  "222"
+	  Position		  [525, 506, 555, 524]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Value			  "U0"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "A Gain"
+	  SID			  "223"
+	  Position		  [280, 429, 320, 461]
+	  Gain			  "A"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "224"
+	  Ports			  [3, 1]
+	  Position		  [225, 247, 250, 283]
+	  Inputs		  "++-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "B Gain"
+	  SID			  "225"
+	  Position		  [155, 419, 195, 451]
+	  Gain			  "B"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "226"
+	  Position		  [510, 290, 530, 310]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock2"
+	  SID			  "227"
+	  Position		  [470, 490, 490, 510]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Compare"
+	  SID			  "228"
+	  Ports			  [2, 1]
+	  Position		  [220, 427, 250, 458]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Over 1?"
+	  SID			  "229"
+	  Ports			  [1, 1]
+	  Position		  [515, 345, 570, 375]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">="
+	  const			  "1"
+	  LogicOutDataTypeMode	  "boolean"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Reset, C"
+	  SID			  "230"
+	  Position		  [400, 264, 425, 286]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Value			  "C"
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "Square"
+	  SID			  "231"
+	  Ports			  [1, 1]
+	  Position		  [160, 250, 190, 280]
+	  Operator		  "magnitude^2"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  SID			  "232"
+	  Position		  [580, 285, 610, 315]
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  SID			  "233"
+	  Position		  [595, 485, 625, 515]
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  SID			  "234"
+	  Position		  [395, 345, 425, 375]
+	  BlockMirror		  on
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "VR"
+	  SID			  "235"
+	  Position		  [535, 311, 560, 329]
+	  ShowName		  off
+	  Value			  "V0"
+	}
+	Block {
+	  BlockType		  Bias
+	  Name			  "add D"
+	  SID			  "236"
+	  Position		  [520, 465, 560, 495]
+	  NamePlacement		  "alternate"
+	  Bias			  "D"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "toDouble"
+	  SID			  "237"
+	  Position		  [550, 233, 600, 257]
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  InitialCondition
+	  Name			  "u IC"
+	  SID			  "238"
+	  Position		  [255, 565, 285, 605]
+	  BlockMirror		  on
+	  Value			  "U0"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "u Integrator"
+	  SID			  "239"
+	  Ports			  [3, 1]
+	  Position		  [650, 431, 700, 499]
+	  NamePlacement		  "alternate"
+	  ExternalReset		  "rising"
+	  InitialConditionSource  "external"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "u Memory"
+	  SID			  "240"
+	  Position		  [660, 570, 690, 600]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "u Memory1"
+	  SID			  "241"
+	  Position		  [655, 520, 685, 550]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  InitialCondition
+	  Name			  "v IC"
+	  SID			  "242"
+	  Position		  [255, 340, 285, 380]
+	  BlockMirror		  on
+	  Value			  "V0"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "v Integrator"
+	  SID			  "243"
+	  Ports			  [3, 1]
+	  Position		  [645, 205, 705, 285]
+	  NamePlacement		  "alternate"
+	  ExternalReset		  "rising"
+	  InitialConditionSource  "external"
+	  InitialCondition	  "VR"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "v Memory"
+	  SID			  "244"
+	  Position		  [660, 345, 690, 375]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "245"
+	  Position		  [795, 238, 825, 252]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  SID			  "246"
+	  Position		  [800, 458, 830, 472]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "sp"
+	  SID			  "1943"
+	  Position		  [530, 408, 560, 422]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, 35]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -45]
+	  DstBlock		  "v Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Square"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "A Gain"
+	  SrcPort		  1
+	  DstBlock		  "u Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "B Gain"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "A Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Over 1?"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  Branch {
+	    DstBlock		    "Switch2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 0]
+	    Branch {
+	      Points		      [0, -115]
+	      DstBlock		      "toDouble"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 55]
+	      DstBlock		      "sp"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "v Memory"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  Branch {
+	    DstBlock		    "Over 1?"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 35; -155, 0]
+	    DstBlock		    "Switch2"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "\nInitial"
+	  SrcPort		  1
+	  Points		  [0, -5]
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "add D"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 10]
+	  DstBlock		  "Switch1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  DstBlock		  "u Integrator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Clock2"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "u Integrator"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Points		    [40, 0]
+	    Branch {
+	      Points		      [0, 120]
+	      DstBlock		      "u Memory"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "u"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [0, 70]
+	    DstBlock		    "u Memory1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Reset, C"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [125, 0]
+	    DstBlock		    "Switch"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Switch2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "v Integrator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "v Integrator"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "v Memory"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "toDouble"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 220]
+	    DstBlock		    "u Integrator"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "v Integrator"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  DstBlock		  "v IC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "u Memory"
+	  SrcPort		  1
+	  DstBlock		  "u IC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "v IC"
+	  SrcPort		  1
+	  Points		  [-110, 0]
+	  Branch {
+	    Points		    [0, -95]
+	    DstBlock		    "Square"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "B Gain"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "u IC"
+	  SrcPort		  1
+	  Points		  [-45, 0; 0, -135]
+	  Branch {
+	    Points		    [0, -175]
+	    DstBlock		    "Add"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Compare"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "VR"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "u Memory1"
+	  SrcPort		  1
+	  Points		  [-145, 0]
+	  DstBlock		  "add D"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "dv/dt =  I + v^2 - u"
+	  Position		  [286, 102]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "du/dt = a(bv - u)"
+	  Position		  [286, 137]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "if v>= 1, then\nv=c, u=u+d"
+	  Position		  [616, 122]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "Dynamics"
+	  Position		  [286, 67]
+	  ForegroundColor	  "blue"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "Threshold Reset"
+	  Position		  [616, 67]
+	  ForegroundColor	  "blue"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Izhikevich Homeo"
+      SID		      "2369"
+      Ports		      [1, 3]
+      Position		      [530, 288, 630, 372]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDisplay	      "image(imread('../Libs/icons/Izhik.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Izhikevich Homeo"
+	Location		[467, 239, 1304, 820]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "2370"
+	  Position		  [40, 48, 70, 62]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "2371"
+	  Ports			  [2, 1]
+	  Position		  [525, 388, 535, 452]
+	  BlockMirror		  on
+	  Inputs		  "-+"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  SID			  "2372"
+	  Ports			  [2, 1]
+	  Position		  [360, 398, 370, 462]
+	  BlockMirror		  on
+	  Inputs		  "-+"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  SID			  "2373"
+	  Ports			  [2, 1]
+	  Position		  [415, 278, 425, 342]
+	  BlockMirror		  on
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add3"
+	  SID			  "2374"
+	  Ports			  [2, 1]
+	  Position		  [530, 263, 540, 327]
+	  BlockMirror		  on
+	  Inputs		  "-+"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "C"
+	  SID			  "2375"
+	  Position		  [335, 90, 365, 110]
+	  Value			  "-50"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  SID			  "2376"
+	  Ports			  [1, 1]
+	  Position		  [290, 294, 330, 326]
+	  BlockMirror		  on
+	  InitialCondition	  "1"
+	  LimitOutput		  on
+	  LowerSaturationLimit	  "0.001"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  SID			  "2377"
+	  Ports			  [1, 1]
+	  Position		  [235, 414, 275, 446]
+	  BlockMirror		  on
+	  InitialCondition	  "1"
+	  LimitOutput		  on
+	  LowerSaturationLimit	  "0.001"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Izhikevich Book Tunable "
+	  SID			  "2378"
+	  Ports			  [5, 3]
+	  Position		  [380, 44, 485, 126]
+	  LibraryVersion	  "1.436"
+	  SourceBlock		  "CompartmentsLib/Izhikevich Book Tunable "
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  settings		  "UserDefined"
+	  A			  "0.03"
+	  B			  "-2"
+	  C			  "-50"
+	  D			  "100"
+	  CP			  "100"
+	  K			  "0.7"
+	  VR			  "-60"
+	  VT			  "-40"
+	  VP			  "35"
+	  V0			  "-60"
+	  U0			  "0"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "Memory"
+	  SID			  "2379"
+	  Position		  [185, 415, 215, 445]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "Memory1"
+	  SID			  "2380"
+	  Position		  [235, 295, 265, 325]
+	  BlockMirror		  on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "2381"
+	  Ports			  [2, 1]
+	  Position		  [275, 93, 285, 122]
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  SID			  "2382"
+	  Ports			  [2, 1]
+	  Position		  [175, 168, 190, 197]
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  SID			  "2383"
+	  Ports			  [2, 1]
+	  Position		  [485, 396, 495, 494]
+	  BlockMirror		  on
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product4"
+	  SID			  "2384"
+	  Ports			  [2, 1]
+	  Position		  [600, 287, 610, 378]
+	  BlockMirror		  on
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "b"
+	  SID			  "2385"
+	  Position		  [305, 75, 330, 95]
+	  Value			  "-2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "base_gK"
+	  SID			  "2386"
+	  Position		  [115, 160, 145, 190]
+	  Value			  "100"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "base_gNA"
+	  SID			  "2387"
+	  Position		  [215, 85, 245, 115]
+	  Value			  "0.03"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "decrease"
+	  SID			  "2388"
+	  Position		  [445, 272, 510, 318]
+	  BlockMirror		  on
+	  Gain			  "6/1000"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "decrease1"
+	  SID			  "2389"
+	  Position		  [385, 391, 450, 439]
+	  BlockMirror		  on
+	  Gain			  "80/1000"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "dub"
+	  SID			  "2390"
+	  Position		  [590, 175, 630, 195]
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "inSpike"
+	  SID			  "2391"
+	  Ports			  [1, 1]
+	  Position		  [530, 170, 560, 200]
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">"
+	  const			  "0"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "max_gNA"
+	  SID			  "2392"
+	  Position		  [565, 420, 595, 450]
+	  BlockMirror		  on
+	  Value			  "5"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "max_gNA1"
+	  SID			  "2393"
+	  Position		  [555, 295, 585, 325]
+	  BlockMirror		  on
+	  Value			  "3"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "tau"
+	  SID			  "2394"
+	  Position		  [295, 405, 340, 455]
+	  BlockMirror		  on
+	  Gain			  "0.01"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "tau1"
+	  SID			  "2395"
+	  Position		  [350, 288, 400, 332]
+	  BlockMirror		  on
+	  Gain			  "0.01"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "2397"
+	  Position		  [540, 53, 570, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  SID			  "2396"
+	  Position		  [585, 78, 615, 92]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "sp"
+	  SID			  "2398"
+	  Position		  [620, 103, 650, 117]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "C"
+	  SrcPort		  1
+	  DstBlock		  "Izhikevich Book Tunable "
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "base_gNA"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "base_gK"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "inSpike"
+	  SrcPort		  1
+	  DstBlock		  "dub"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  DstBlock		  "tau1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tau1"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dub"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 170]
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Product4"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  DstBlock		  "Memory1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  DstBlock		  "Memory"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Memory"
+	  SrcPort		  1
+	  Points		  [-5, 0]
+	  Branch {
+	    Points		    [0, -50; 295, 0]
+	    Branch {
+	      Points		      [0, 35]
+	      DstBlock		      "decrease1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [80, 0]
+	      DstBlock		      "Add"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [-20, 0; 0, -240]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "tau"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "max_gNA"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "tau"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Memory1"
+	  SrcPort		  1
+	  Points		  [-10, 0; 0, -55; 40, 0]
+	  Branch {
+	    Points		    [295, 0]
+	    Branch {
+	      DstBlock		      "Add3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [80, 0; 0, 55]
+	      DstBlock		      "Product4"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product4"
+	  SrcPort		  1
+	  Points		  [-155, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "max_gNA1"
+	  SrcPort		  1
+	  DstBlock		  "Add3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "decrease"
+	  SrcPort		  1
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "decrease1"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add3"
+	  SrcPort		  1
+	  DstBlock		  "decrease"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Product3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -40]
+	  DstBlock		  "Izhikevich Book Tunable "
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [170, 0]
+	  DstBlock		  "Izhikevich Book Tunable "
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "b"
+	  SrcPort		  1
+	  DstBlock		  "Izhikevich Book Tunable "
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Izhikevich Book Tunable "
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 125]
+	    DstBlock		    "inSpike"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  DstBlock		  "Izhikevich Book Tunable "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Izhikevich Book Tunable "
+	  SrcPort		  2
+	  DstBlock		  "u"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Izhikevich Book Tunable "
+	  SrcPort		  3
+	  DstBlock		  "sp"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PassiveCompartment"
+      SID		      "357"
+      Ports		      [3, 3]
+      Position		      [130, 194, 240, 266]
+      FontName		      "Arial"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Capacitance, C|Initial Voltage, V0|Axial Conductance, gA|Comp Diameter, d|Comp Length, L"
+      "|Leak Conductance, gL|Leak Eq Voltage, EL"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "C=@1;V0=@2;gA=@3;d=@4;L=@5;gL=@6;EL=@7;"
+      MaskTunableValueString  "on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on"
+      MaskDisplay	      "image(imread('../Libs/icons/Compartment.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "C|V0|gA|d|L|gL|EL"
+      MaskTabNameString	      "Basics,Basics,Basics,Basics,Basics,Currents,Currents"
+      System {
+	Name			"PassiveCompartment"
+	Location		[245, 367, 1043, 800]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "v-"
+	  SID			  "358"
+	  Position		  [660, 203, 690, 217]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "v+"
+	  SID			  "359"
+	  Position		  [660, 243, 690, 257]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "360"
+	  Position		  [435, 288, 465, 302]
+	  BlockMirror		  on
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Capacitance"
+	  SID			  "361"
+	  Position		  [220, 218, 265, 262]
+	  BlockMirror		  on
+	  Gain			  "1/C"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Compare"
+	  SID			  "362"
+	  Ports			  [4, 1]
+	  Position		  [625, 204, 635, 276]
+	  BlockMirror		  on
+	  Inputs		  "+-+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "363"
+	  Position		  [505, 210, 600, 270]
+	  BlockMirror		  on
+	  Gain			  "(gA*d)/(4*L^2)"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Leak Current, IL"
+	  SID			  "365"
+	  Ports			  [1, 1]
+	  Position		  [410, 153, 495, 217]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1058"
+	  SourceBlock		  "CurrentsLib/Ungated Current"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  EX			  "EL"
+	  gX			  "gL"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "367"
+	  Ports			  [3, 1]
+	  Position		  [290, 154, 300, 326]
+	  BlockMirror		  on
+	  Inputs		  "+++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "VIntegrate"
+	  SID			  "368"
+	  Ports			  [1, 1]
+	  Position		  [165, 220, 200, 260]
+	  BlockMirror		  on
+	  InitialCondition	  "V0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "369"
+	  Position		  [90, 330, 105, 360]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IL"
+	  SID			  "372"
+	  Position		  [330, 190, 345, 220]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Iinter"
+	  SID			  "373"
+	  Position		  [330, 250, 345, 280]
+	  BlockMirror		  on
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "v+"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "v-"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Leak Current, IL"
+	  SrcPort		  1
+	  Points		  [-40, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "IL"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Capacitance"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Capacitance"
+	  SrcPort		  1
+	  DstBlock		  "VIntegrate"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "VIntegrate"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, 105]
+	  Branch {
+	    Points		    [570, 0; 0, -75]
+	    Branch {
+	      DstBlock		      "Compare"
+	      DstPort		      4
+	    }
+	    Branch {
+	      Points		      [0, -40]
+	      Branch {
+		DstBlock		"Compare"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -45]
+		DstBlock		"Leak Current, IL"
+		DstPort			1
+	      }
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [-140, 0]
+	  Branch {
+	    DstBlock		    "Iinter"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	}
+	Annotation {
+	  Name			  "C dV/dt =  gL (E_L - V) + (g_Ad / 4L^2) * (V_{prev} - V + V_{next} - V) + I_{additonal}"
+	  Position		  [416, 97]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "C dV/dt =  I_L + I_{inter} + I_{suppl}"
+	  Position		  [421, 57]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PassiveEndCompartment"
+      SID		      "374"
+      Ports		      [2, 3]
+      Position		      [130, 93, 240, 167]
+      FontName		      "Arial"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Capacitance, C|Initial Voltage, V0|Axial Conductance, gA|Comp Diameter, d|Comp Length, L"
+      "|Leak Conductance, gL|Leak Eq Voltage, EL"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "C=@1;V0=@2;gA=@3;d=@4;L=@5;gL=@6;EL=@7;"
+      MaskTunableValueString  "on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on"
+      MaskDisplay	      "image(imread('../Libs/icons/Compartment.jpg'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "C|V0|gA|d|L|gL|EL"
+      MaskTabNameString	      "Basic,Basic,Basic,Basic,Basic,Currents,Currents"
+      System {
+	Name			"PassiveEndCompartment"
+	Location		[245, 367, 1043, 800]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "v-"
+	  SID			  "1393"
+	  Position		  [660, 218, 690, 232]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  SID			  "1394"
+	  Position		  [435, 288, 465, 302]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Capacitance"
+	  SID			  "1395"
+	  Position		  [220, 218, 265, 262]
+	  BlockMirror		  on
+	  Gain			  "1/C"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Compare"
+	  SID			  "1396"
+	  Ports			  [2, 1]
+	  Position		  [625, 209, 635, 271]
+	  BlockMirror		  on
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "1397"
+	  Position		  [505, 210, 600, 270]
+	  BlockMirror		  on
+	  Gain			  "(gA*d)/(4*L^2)"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Leak Current, IL"
+	  SID			  "1398"
+	  Ports			  [1, 1]
+	  Position		  [410, 153, 495, 217]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.1058"
+	  SourceBlock		  "CurrentsLib/Ungated Current"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  EX			  "EL"
+	  gX			  "gL"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "1399"
+	  Ports			  [3, 1]
+	  Position		  [290, 154, 300, 326]
+	  BlockMirror		  on
+	  Inputs		  "+++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "VIntegrate"
+	  SID			  "1400"
+	  Ports			  [1, 1]
+	  Position		  [165, 220, 200, 260]
+	  BlockMirror		  on
+	  InitialCondition	  "V0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v"
+	  SID			  "1401"
+	  Position		  [90, 330, 105, 360]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IL"
+	  SID			  "1402"
+	  Position		  [330, 190, 345, 220]
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Iinter"
+	  SID			  "1403"
+	  Position		  [330, 250, 345, 280]
+	  BlockMirror		  on
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [-140, 0]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Iinter"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "VIntegrate"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, 105]
+	  Branch {
+	    DstBlock		    "v"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [570, 0; 0, -90]
+	    Branch {
+	      Points		      [0, -70]
+	      DstBlock		      "Leak Current, IL"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Compare"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Capacitance"
+	  SrcPort		  1
+	  DstBlock		  "VIntegrate"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Capacitance"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Leak Current, IL"
+	  SrcPort		  1
+	  Points		  [-40, 0]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "IL"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "v-"
+	  SrcPort		  1
+	  DstBlock		  "Compare"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "C dV/dt =  I_L + I_{inter} + I_{suppl}"
+	  Position		  [421, 57]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "C dV/dt =  gL (E_L - V) + (g_Ad / 4L^2) * (V_{adj} - V ) + I_{additonal}"
+	  Position		  [416, 97]
+	  ForegroundColor	  "red"
+	  Interpreter		  "tex"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+      }
+    }
+  }
+}

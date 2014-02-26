@@ -1,0 +1,4096 @@
+Library {
+  Name			  "UtilsLib"
+  Version		  7.7
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Sun Jan 10 16:40:34 2010"
+  Creator		  "jpalma"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "jpalma"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Jun 13 16:00:37 2012"
+  RTWModifiedTimeStamp	  261504014
+  ModelVersionFormat	  "1.%<AutoIncrement:323>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  on
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  off
+	  BooleanDataType	  off
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"PortableWordSizes"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      FunctionExecutionProfile off
+	      CodeExecutionProfiling  off
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 400, 210, 1280, 840 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Clock
+      DisplayTime	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      PropagateVarSize	      "Only when enabling"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      M-S-Function
+      FunctionName	      "matlabfile"
+      DisplayMFileStacktrace  on
+    }
+    Block {
+      BlockType		      MATLABFcn
+      MATLABFcn		      "sin"
+      OutputDimensions	      "-1"
+      OutputSignalType	      "auto"
+      Output1D		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+      AlgorithmType	      "Newton-Raphson"
+      Iterations	      "3"
+    }
+    Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+      LinearizeMemory	      off
+      LinearizeAsDelay	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      MinMax
+      Function		      "min"
+      Inputs		      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Sqrt
+      Operator		      "sqrt"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+      AlgorithmType	      "Exact"
+      Iterations	      "3"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      TransportDelay
+      DelayTime		      "1"
+      InitialOutput	      "0"
+      BufferSize	      "1024"
+      FixedBuffer	      off
+      TransDelayFeedthrough   off
+      PadeOrder		      "0"
+    }
+  }
+  System {
+    Name		    "UtilsLib"
+    Location		    [511, 436, 1260, 880]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    212
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "396"
+    Block {
+      BlockType		      Reference
+      Name		      "Convert 1-D to 2-D"
+      SID		      "13"
+      Ports		      [1, 1]
+      Position		      [80, 158, 165, 202]
+      LibraryVersion	      "1.503"
+      SourceBlock	      "dspsigattribs/Convert 1-D to 2-D"
+      SourceType	      "Convert 1-D to 2-D"
+      ShowPortLabels	      "none"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      GeneratePreprocessorConditionals off
+      M			      "1"
+      N			      "1"
+      frameBasedOut	      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Convert 2-D to 1-D"
+      SID		      "14"
+      Ports		      [1, 1]
+      Position		      [220, 162, 270, 198]
+      LibraryVersion	      "1.503"
+      SourceBlock	      "dspsigattribs/Convert 2-D to 1-D"
+      SourceType	      "Convert 2-D to 1-D"
+      ShowPortLabels	      "none"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Delay"
+      SID		      "1"
+      Ports		      [1, 1]
+      Position		      [215, 69, 275, 111]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskPromptString	      "Delay|Initial Output"
+      MaskStyleString	      "edit,edit"
+      MaskVariables	      "Delay=@1;IC=@2;"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskToolTipString	      "on,on"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|0"
+      System {
+	Name			"Delay"
+	Location		[505, 535, 875, 743]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "s"
+	  SID			  "15"
+	  Position		  [65, 58, 95, 72]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  TransportDelay
+	  Name			  "Transport\nDelay"
+	  SID			  "16"
+	  Ports			  [1, 1]
+	  Position		  [135, 50, 165, 80]
+	  DelayTime		  "Delay"
+	  InitialOutput		  "IC"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "delayds"
+	  SID			  "17"
+	  Position		  [220, 58, 250, 72]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "s"
+	  SrcPort		  1
+	  DstBlock		  "Transport\nDelay"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Transport\nDelay"
+	  SrcPort		  1
+	  DstBlock		  "delayds"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Matrix\nViewer"
+      SID		      "18"
+      Ports		      [1]
+      Position		      [85, 246, 155, 284]
+      LibraryVersion	      "1.473"
+      SourceBlock	      "dspsnks4/Matrix\nViewer"
+      SourceType	      "Matrix Viewer"
+      ShowPortLabels	      off
+      ImageParams	      off
+      CMapStr		      "hot(256)"
+      YMin		      "-1.0"
+      YMax		      "1.0"
+      AxisColorbar	      on
+      AxisParams	      off
+      AxisOrigin	      "Upper left corner"
+      XLabel		      "X-axis"
+      YLabel		      "Y-axis"
+      ZLabel		      "Z-axis"
+      FigPos		      "get(0,'defaultfigureposition')"
+      AxisZoom		      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Running Max"
+      SID		      "219"
+      Ports		      [1, 1]
+      Position		      [220, 324, 270, 356]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskPromptString	      "Initial Value"
+      MaskStyleString	      "edit"
+      MaskVariables	      "IC=@1;"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "0"
+      System {
+	Name			"Running Max"
+	Location		[983, 246, 1200, 384]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "s"
+	  SID			  "220"
+	  Position		  [25, 28, 55, 42]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "Memory"
+	  SID			  "221"
+	  Position		  [80, 80, 110, 110]
+	  BlockMirror		  on
+	  X0			  "IC"
+	}
+	Block {
+	  BlockType		  MinMax
+	  Name			  "MinMax"
+	  SID			  "222"
+	  Ports			  [2, 1]
+	  Position		  [80, 27, 110, 58]
+	  Function		  "max"
+	  Inputs		  "2"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "max"
+	  SID			  "223"
+	  Position		  [155, 38, 185, 52]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "s"
+	  SrcPort		  1
+	  DstBlock		  "MinMax"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Memory"
+	  SrcPort		  1
+	  Points		  [-20, 0; 0, -45]
+	  DstBlock		  "MinMax"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "MinMax"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "max"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "Memory"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Smoothed Time Step"
+      SID		      "2"
+      Ports		      [0, 1]
+      Position		      [90, 65, 150, 115]
+      FontName		      "Arial"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "What are the time units?\nAuthor: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Number of Time Steps Smoothed"
+      MaskStyleString	      "edit"
+      MaskVariables	      "timeStepsSmoothed=@1;"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskDisplay	      "image(imread('../Libs/icons/TimeStep.JPG'), 'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "pixels"
+      MaskValueString	      "10"
+      System {
+	Name			"Smoothed Time Step"
+	Location		[231, 358, 880, 680]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "19"
+	  Position		  [90, 115, 110, 135]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Mean"
+	  SID			  "20"
+	  Ports			  [1, 1]
+	  Position		  [415, 105, 470, 145]
+	  LibraryVersion	  "1.485"
+	  SourceBlock		  "dspstat3/Mean"
+	  SourceType		  "Mean"
+	  run			  "off"
+	  reset_popup		  "None"
+	  directionMode		  "Each column"
+	  dimension		  "1"
+	  treatSBRowAsCol	  "on"
+	  roiEnable		  "off"
+	  roiType		  "Rectangles"
+	  roiPortion		  "Entire ROI"
+	  roiOutput		  "Individual statistics for each ROI"
+	  roiFlag		  "off"
+	  additionalParams	  "off"
+	  allowOverrides	  "on"
+	  outputMode		  "Same as accumulator"
+	  outputWordLength	  "32"
+	  outputFracLength	  "30"
+	  outputDataTypeStr	  "Inherit: Same as accumulator"
+	  outputLastDataTypeStr	  "Inherit: Same as accumulator"
+	  outputMin		  "[]"
+	  outputMax		  "[]"
+	  accumMode		  "Same as input"
+	  accumWordLength	  "32"
+	  accumFracLength	  "30"
+	  accumDataTypeStr	  "Inherit: Same as input"
+	  accumLastDataTypeStr	  "Inherit: Same as input"
+	  roundingMode		  "Floor"
+	  overflowMode		  "off"
+	  LockScale		  "off"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "Memory"
+	  SID			  "21"
+	  Position		  [160, 125, 190, 155]
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Subtract"
+	  SID			  "22"
+	  Ports			  [2, 1]
+	  Position		  [245, 107, 275, 138]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Tapped Delay"
+	  SID			  "23"
+	  Ports			  [1, 1]
+	  Position		  [330, 107, 365, 143]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Discrete/Tapped Delay"
+	  SourceType		  "Tapped Delay Line"
+	  vinit			  "0"
+	  samptime		  "-1"
+	  NumDelays		  "timeStepsSmoothed"
+	  DelayOrder		  "Oldest"
+	  includeCurrent	  "off"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "timeStep"
+	  SID			  "24"
+	  Position		  [530, 118, 560, 132]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "Memory"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -10]
+	    DstBlock		    "Subtract"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Memory"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -10]
+	  DstBlock		  "Subtract"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Subtract"
+	  SrcPort		  1
+	  DstBlock		  "Tapped Delay"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Tapped Delay"
+	  SrcPort		  1
+	  DstBlock		  "Mean"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mean"
+	  SrcPort		  1
+	  DstBlock		  "timeStep"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Windowed Stats"
+      SID		      "204"
+      Ports		      [1, 2]
+      Position		      [220, 244, 270, 286]
+      LibraryVersion	      "*1.280"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Computes avg (arithematic mean) and standard deviation (std, sqrt of variance) over a spe"
+      "cific window\n\nBlock Authors: Jesse Palma and Himanshu Mhatre"
+      MaskHelp		      "Computes avg (arithematic mean) and standard deviation (std, sqrt of variance) over a specific "
+      "window\n\nBlock Authors: Jesse Palma and Himanshu Mhatre"
+      MaskPromptString	      "Window Size"
+      MaskStyleString	      "edit"
+      MaskVariables	      "winL=@1;"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "100"
+      System {
+	Name			"Windowed Stats"
+	Location		[117, 528, 972, 864]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "s"
+	  SID			  "206"
+	  Position		  [15, 133, 45, 147]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "2"
+	  SID			  "195"
+	  Position		  [325, 196, 360, 224]
+	  Gain			  "2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay1"
+	  SID			  "192"
+	  Ports			  [1, 1]
+	  Position		  [140, 83, 200, 117]
+	  LibraryVersion	  "1.306"
+	  SourceBlock		  "UtilsLib/Delay"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  Delay			  "winL"
+	  IC			  "0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Dif"
+	  SID			  "189"
+	  Ports			  [2, 1]
+	  Position		  [240, 89, 250, 131]
+	  Inputs		  "-+"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Int Var"
+	  SID			  "198"
+	  Ports			  [1, 1]
+	  Position		  [545, 160, 575, 190]
+	  LowerSaturationLimit	  "0"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Int avg"
+	  SID			  "197"
+	  Ports			  [1, 1]
+	  Position		  [465, 95, 495, 125]
+	}
+	Block {
+	  BlockType		  MinMax
+	  Name			  "MinMax"
+	  SID			  "217"
+	  Ports			  [2, 1]
+	  Position		  [615, 167, 645, 198]
+	  Function		  "max"
+	  Inputs		  "2"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Prod"
+	  SID			  "199"
+	  Ports			  [2, 1]
+	  Position		  [285, 192, 295, 223]
+	  Inputs		  "**"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sqrt
+	  Name			  "Sqrt"
+	  SID			  "200"
+	  Position		  [700, 170, 730, 200]
+	  AlgorithmType		  "Newton-Raphson"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "190"
+	  Ports			  [3, 1]
+	  Position		  [375, 150, 385, 220]
+	  Inputs		  "-+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  SID			  "191"
+	  Ports			  [2, 1]
+	  Position		  [500, 149, 510, 196]
+	  Inputs		  "-+"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "norm1"
+	  SID			  "210"
+	  Position		  [305, 87, 355, 133]
+	  Gain			  "1/winL"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "norm2"
+	  SID			  "211"
+	  Position		  [415, 167, 475, 203]
+	  Gain			  "1/winL"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "sq"
+	  SID			  "201"
+	  Ports			  [1, 1]
+	  Position		  [225, 149, 255, 171]
+	  Operator		  "magnitude^2"
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "sq1"
+	  SID			  "202"
+	  Ports			  [1, 1]
+	  Position		  [170, 174, 200, 196]
+	  Operator		  "magnitude^2"
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "sq2"
+	  SID			  "203"
+	  Ports			  [1, 1]
+	  Position		  [455, 29, 485, 51]
+	  Operator		  "magnitude^2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "zero"
+	  SID			  "218"
+	  Position		  [545, 212, 575, 228]
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "avg"
+	  SID			  "208"
+	  Position		  [745, 103, 775, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "std"
+	  SID			  "207"
+	  Position		  [755, 178, 785, 192]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "norm2"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "norm1"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "Int avg"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "sq2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Delay1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Dif"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "sq"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Dif"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "norm1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 90]
+	    DstBlock		    "Prod"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "sq"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "sq1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Int avg"
+	  SrcPort		  1
+	  Points		  [190, 0]
+	  Branch {
+	    Points		    [0, 140; -420, 0]
+	    DstBlock		    "Prod"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "avg"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Prod"
+	  SrcPort		  1
+	  DstBlock		  "2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "2"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "norm2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Int Var"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sqrt"
+	  SrcPort		  1
+	  DstBlock		  "std"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, -40]
+	    DstBlock		    "Delay1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 0]
+	    Branch {
+	      Points		      [0, 45]
+	      DstBlock		      "sq1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 0; 140, 0]
+	      DstBlock		      "Dif"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Int Var"
+	  SrcPort		  1
+	  DstBlock		  "MinMax"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "zero"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -30]
+	  DstBlock		  "MinMax"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "MinMax"
+	  SrcPort		  1
+	  DstBlock		  "Sqrt"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "XY Logplot"
+      SID		      "111"
+      Ports		      [2, 1]
+      Position		      [490, 58, 575, 127]
+      ShowPortLabels	      "FromPortBlockName"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Plotting Interval (Sim steps)"
+      MaskStyleString	      "edit"
+      MaskVariables	      "plotInt=@1;"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskDisplay	      "image(imread('../Libs/icons/XYFunc.JPG'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "10"
+      System {
+	Name			"XY Logplot"
+	Location		[867, 533, 1504, 896]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	212
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "X"
+	  SID			  "112"
+	  Position		  [95, 238, 125, 252]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y"
+	  SID			  "113"
+	  Position		  [95, 263, 125, 277]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "= Zero?"
+	  SID			  "114"
+	  Ports			  [1, 1]
+	  Position		  [260, 60, 290, 90]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  "=="
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  "on"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "115"
+	  Position		  [105, 65, 125, 85]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Detect\nDecrease"
+	  SID			  "116"
+	  Ports			  [1, 1]
+	  Position		  [245, 110, 305, 140]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Detect\nDecrease"
+	  SourceType		  "Detect Decrease"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  vinit			  "0.0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "New Axes"
+	  SID			  "117"
+	  Ports			  [0, 1, 1]
+	  Position		  [365, 102, 415, 148]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "New Axes"
+	    Location		    [126, 289, 688, 579]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "118"
+	      Ports		      []
+	      Position		      [220, 55, 240, 75]
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Axes"
+	      SID		      "119"
+	      Ports		      [1, 1]
+	      Position		      [205, 135, 265, 165]
+	      MATLABFcn		      "gca;"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "fig"
+	      SID		      "188"
+	      Ports		      [1, 1]
+	      Position		      [95, 135, 155, 165]
+	      MATLABFcn		      "figure();"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "120"
+	      Position		      [385, 143, 415, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Axes"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "fig"
+	      SrcPort		      1
+	      DstBlock		      "Axes"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Plot Update"
+	  SID			  "121"
+	  Ports			  [3, 1, 1]
+	  Position		  [205, 208, 330, 282]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Plot Update"
+	    Location		    [766, 589, 1344, 895]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "h"
+	      SID		      "122"
+	      Position		      [45, 88, 75, 102]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X"
+	      SID		      "123"
+	      Position		      [45, 113, 75, 127]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y"
+	      SID		      "124"
+	      Position		      [45, 138, 75, 152]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "125"
+	      Ports		      []
+	      Position		      [260, 25, 280, 45]
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "L2 M-file S-Funct"
+	      SID		      "126"
+	      Ports		      [3, 1]
+	      Position		      [240, 90, 300, 150]
+	      FunctionName	      "SLogPlot"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "127"
+	      Position		      [420, 118, 450, 132]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "L2 M-file S-Funct"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Y"
+	      SrcPort		      1
+	      Points		      [70, 0; 0, -5]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "X"
+	      SrcPort		      1
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "h"
+	      SrcPort		      1
+	      Points		      [70, 0; 0, 5]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "mod"
+	  SID			  "128"
+	  Ports			  [2, 1]
+	  Position		  [180, 107, 210, 138]
+	  Operator		  "rem"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "plotInt"
+	  SID			  "129"
+	  Position		  [90, 113, 135, 147]
+	  Value			  "plotInt"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "h"
+	  SID			  "130"
+	  Position		  [385, 238, 415, 252]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Labels		  [2, 0]
+	  SrcBlock		  "Detect\nDecrease"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 69]
+	  DstBlock		  "Plot Update"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "New Axes"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 60; -245, 0]
+	  DstBlock		  "Plot Update"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "= Zero?"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "New Axes"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "mod"
+	  SrcPort		  1
+	  DstBlock		  "Detect\nDecrease"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    DstBlock		    "= Zero?"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 40]
+	    DstBlock		    "mod"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "plotInt"
+	  SrcPort		  1
+	  DstBlock		  "mod"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Y"
+	  SrcPort		  1
+	  DstBlock		  "Plot Update"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Plot Update"
+	  SrcPort		  1
+	  DstBlock		  "h"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "X"
+	  SrcPort		  1
+	  DstBlock		  "Plot Update"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "XY Plot"
+      SID		      "3"
+      Ports		      [2, 1]
+      Position		      [350, 58, 440, 127]
+      ShowPortLabels	      "FromPortBlockName"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Plotting Interval (Sim steps)"
+      MaskStyleString	      "edit"
+      MaskVariables	      "plotInt=@1;"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskDisplay	      "image(imread('../Libs/icons/XYFunc.JPG'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "10"
+      System {
+	Name			"XY Plot"
+	Location		[850, 456, 1383, 852]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "X"
+	  SID			  "25"
+	  Position		  [125, 253, 155, 267]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y"
+	  SID			  "26"
+	  Position		  [125, 278, 155, 292]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "= Zero?"
+	  SID			  "86"
+	  Ports			  [1, 1]
+	  Position		  [275, 85, 305, 115]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  "=="
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  "on"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "85"
+	  Position		  [125, 90, 145, 110]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Detect\nDecrease"
+	  SID			  "109"
+	  Ports			  [1, 1]
+	  Position		  [260, 135, 320, 165]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Detect\nDecrease"
+	  SourceType		  "Detect Decrease"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  vinit			  "0.0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "New Axes"
+	  SID			  "91"
+	  Ports			  [0, 1, 1]
+	  Position		  [360, 128, 425, 172]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "New Axes"
+	    Location		    [126, 289, 688, 579]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "95"
+	      Ports		      []
+	      Position		      [220, 55, 240, 75]
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Axes"
+	      SID		      "100"
+	      Ports		      [1, 1]
+	      Position		      [205, 135, 265, 165]
+	      MATLABFcn		      "gca;"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "fig"
+	      SID		      "187"
+	      Ports		      [1, 1]
+	      Position		      [95, 135, 155, 165]
+	      MATLABFcn		      "figure();"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "97"
+	      Position		      [385, 143, 415, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Axes"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "fig"
+	      SrcPort		      1
+	      DstBlock		      "Axes"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Plot Update"
+	  SID			  "78"
+	  Ports			  [3, 1, 1]
+	  Position		  [240, 225, 340, 295]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Plot Update"
+	    Location		    [766, 589, 1344, 895]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "h"
+	      SID		      "89"
+	      Position		      [45, 88, 75, 102]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X"
+	      SID		      "79"
+	      Position		      [45, 113, 75, 127]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y"
+	      SID		      "81"
+	      Position		      [45, 138, 75, 152]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "94"
+	      Ports		      []
+	      Position		      [260, 25, 280, 45]
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "L2 M-file S-Funct"
+	      SID		      "105"
+	      Ports		      [3, 1]
+	      Position		      [240, 90, 300, 150]
+	      FunctionName	      "SPlot"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "80"
+	      Position		      [420, 118, 450, 132]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "h"
+	      SrcPort		      1
+	      Points		      [70, 0; 0, 5]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "X"
+	      SrcPort		      1
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Y"
+	      SrcPort		      1
+	      Points		      [70, 0; 0, -5]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "L2 M-file S-Funct"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "mod"
+	  SID			  "83"
+	  Ports			  [2, 1]
+	  Position		  [200, 132, 230, 163]
+	  Operator		  "rem"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "plotInt"
+	  SID			  "84"
+	  Position		  [115, 138, 160, 172]
+	  Value			  "plotInt"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "h"
+	  SID			  "30"
+	  Position		  [400, 253, 430, 267]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "X"
+	  SrcPort		  1
+	  DstBlock		  "Plot Update"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Plot Update"
+	  SrcPort		  1
+	  DstBlock		  "h"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Y"
+	  SrcPort		  1
+	  DstBlock		  "Plot Update"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "plotInt"
+	  SrcPort		  1
+	  DstBlock		  "mod"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 40]
+	    DstBlock		    "mod"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "= Zero?"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "mod"
+	  SrcPort		  1
+	  DstBlock		  "Detect\nDecrease"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "= Zero?"
+	  SrcPort		  1
+	  Points		  [85, 0]
+	  DstBlock		  "New Axes"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "New Axes"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 50; -250, 0; 0, 35]
+	  DstBlock		  "Plot Update"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [2, 0]
+	  SrcBlock		  "Detect\nDecrease"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 58]
+	  DstBlock		  "Plot Update"
+	  DstPort		  enable
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "XY Scatter"
+      SID		      "224"
+      Ports		      [2, 1]
+      Position		      [355, 308, 445, 377]
+      ShowPortLabels	      "FromPortBlockName"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Plotting Interval (Sim steps)"
+      MaskStyleString	      "edit"
+      MaskVariables	      "plotInt=@1;"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskDisplay	      "image(imread('../Libs/icons/XYFunc.JPG'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "10"
+      System {
+	Name			"XY Scatter"
+	Location		[964, 328, 1497, 724]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "X"
+	  SID			  "225"
+	  Position		  [125, 253, 155, 267]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y"
+	  SID			  "226"
+	  Position		  [125, 278, 155, 292]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "= Zero?"
+	  SID			  "227"
+	  Ports			  [1, 1]
+	  Position		  [275, 85, 305, 115]
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  "=="
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "228"
+	  Position		  [125, 90, 145, 110]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Detect\nDecrease"
+	  SID			  "229"
+	  Ports			  [1, 1]
+	  Position		  [260, 135, 320, 165]
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Detect\nDecrease"
+	  SourceType		  "Detect Decrease"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  vinit			  "0.0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "New Axes"
+	  SID			  "230"
+	  Ports			  [0, 1, 1]
+	  Position		  [360, 128, 425, 172]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "New Axes"
+	    Location		    [126, 289, 688, 579]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "231"
+	      Ports		      []
+	      Position		      [220, 55, 240, 75]
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Axes"
+	      SID		      "232"
+	      Ports		      [1, 1]
+	      Position		      [205, 135, 265, 165]
+	      MATLABFcn		      "gca;"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "fig"
+	      SID		      "233"
+	      Ports		      [1, 1]
+	      Position		      [95, 135, 155, 165]
+	      MATLABFcn		      "figure();"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "234"
+	      Position		      [385, 143, 415, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "fig"
+	      SrcPort		      1
+	      DstBlock		      "Axes"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Axes"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Scatter Update"
+	  SID			  "235"
+	  Ports			  [3, 1, 1]
+	  Position		  [240, 225, 340, 295]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Scatter Update"
+	    Location		    [766, 589, 1344, 895]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "h"
+	      SID		      "236"
+	      Position		      [45, 88, 75, 102]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X"
+	      SID		      "237"
+	      Position		      [45, 113, 75, 127]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y"
+	      SID		      "238"
+	      Position		      [45, 138, 75, 152]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "239"
+	      Ports		      []
+	      Position		      [260, 25, 280, 45]
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "L2 M-file S-Funct"
+	      SID		      "240"
+	      Ports		      [3, 1]
+	      Position		      [240, 90, 300, 150]
+	      FunctionName	      "SScatter"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "241"
+	      Position		      [420, 118, 450, 132]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "L2 M-file S-Funct"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Y"
+	      SrcPort		      1
+	      Points		      [70, 0; 0, -5]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "X"
+	      SrcPort		      1
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "h"
+	      SrcPort		      1
+	      Points		      [70, 0; 0, 5]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "mod"
+	  SID			  "242"
+	  Ports			  [2, 1]
+	  Position		  [200, 132, 230, 163]
+	  Operator		  "rem"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "plotInt"
+	  SID			  "243"
+	  Position		  [115, 138, 160, 172]
+	  Value			  "plotInt"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "h"
+	  SID			  "244"
+	  Position		  [400, 253, 430, 267]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Labels		  [2, 0]
+	  SrcBlock		  "Detect\nDecrease"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 58]
+	  DstBlock		  "Scatter Update"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "New Axes"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 50; -250, 0; 0, 35]
+	  DstBlock		  "Scatter Update"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "= Zero?"
+	  SrcPort		  1
+	  Points		  [85, 0]
+	  DstBlock		  "New Axes"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "mod"
+	  SrcPort		  1
+	  DstBlock		  "Detect\nDecrease"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    DstBlock		    "= Zero?"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 40]
+	    DstBlock		    "mod"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "plotInt"
+	  SrcPort		  1
+	  DstBlock		  "mod"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Y"
+	  SrcPort		  1
+	  DstBlock		  "Scatter Update"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Scatter Update"
+	  SrcPort		  1
+	  DstBlock		  "h"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "X"
+	  SrcPort		  1
+	  DstBlock		  "Scatter Update"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "XY2 Plot"
+      SID		      "131"
+      Ports		      [4, 1]
+      Position		      [350, 164, 445, 246]
+      ShowPortLabels	      "FromPortBlockName"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Plotting Interval (Sim steps)"
+      MaskStyleString	      "edit"
+      MaskVariables	      "plotInt=@1;"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskDisplay	      "image(imread('../Libs/icons/XYFunc.JPG'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "10"
+      System {
+	Name			"XY2 Plot"
+	Location		[588, 365, 1122, 770]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "X"
+	  SID			  "132"
+	  Position		  [135, 243, 165, 257]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y"
+	  SID			  "133"
+	  Position		  [135, 268, 165, 282]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X2"
+	  SID			  "134"
+	  Position		  [135, 293, 165, 307]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y2"
+	  SID			  "152"
+	  Position		  [135, 318, 165, 332]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "= Zero?"
+	  SID			  "135"
+	  Ports			  [1, 1]
+	  Position		  [270, 75, 300, 105]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  "=="
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  "on"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "136"
+	  Position		  [115, 80, 135, 100]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Detect\nDecrease"
+	  SID			  "137"
+	  Ports			  [1, 1]
+	  Position		  [255, 125, 315, 155]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Detect\nDecrease"
+	  SourceType		  "Detect Decrease"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  vinit			  "0.0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "New Axes"
+	  SID			  "138"
+	  Ports			  [0, 1, 1]
+	  Position		  [370, 119, 435, 161]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "New Axes"
+	    Location		    [126, 289, 688, 579]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "139"
+	      Ports		      []
+	      Position		      [220, 55, 240, 75]
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Axes"
+	      SID		      "140"
+	      Ports		      [1, 1]
+	      Position		      [205, 135, 265, 165]
+	      MATLABFcn		      "gca();"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "fig"
+	      SID		      "186"
+	      Ports		      [1, 1]
+	      Position		      [105, 135, 165, 165]
+	      MATLABFcn		      "figure();"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "141"
+	      Position		      [345, 143, 375, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Axes"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "fig"
+	      SrcPort		      1
+	      DstBlock		      "Axes"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Plot Update"
+	  SID			  "142"
+	  Ports			  [5, 1, 1]
+	  Position		  [265, 230, 340, 320]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Plot Update"
+	    Location		    [340, 369, 785, 622]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "h"
+	      SID		      "143"
+	      Position		      [95, 68, 125, 82]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X"
+	      SID		      "144"
+	      Position		      [95, 93, 125, 107]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y"
+	      SID		      "145"
+	      Position		      [95, 118, 125, 132]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X2"
+	      SID		      "153"
+	      Position		      [95, 143, 125, 157]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y2"
+	      SID		      "154"
+	      Position		      [95, 168, 125, 182]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "146"
+	      Ports		      []
+	      Position		      [235, 30, 255, 50]
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "L2 M-file S-Funct"
+	      SID		      "147"
+	      Ports		      [5, 1]
+	      Position		      [215, 95, 275, 155]
+	      FunctionName	      "SPlot2"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "148"
+	      Position		      [350, 118, 380, 132]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "L2 M-file S-Funct"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Y"
+	      SrcPort		      1
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "X"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, 15]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "h"
+	      SrcPort		      1
+	      Points		      [0, 30]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "X2"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -15]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Y2"
+	      SrcPort		      1
+	      Points		      [0, -30]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      5
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "mod"
+	  SID			  "149"
+	  Ports			  [2, 1]
+	  Position		  [190, 122, 220, 153]
+	  Operator		  "rem"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "plotInt"
+	  SID			  "150"
+	  Position		  [100, 128, 145, 162]
+	  Value			  "plotInt"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "h"
+	  SID			  "151"
+	  Position		  [415, 268, 445, 282]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Labels		  [2, 0]
+	  SrcBlock		  "Detect\nDecrease"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 44; -45, 0]
+	  DstBlock		  "Plot Update"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "New Axes"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 60; -215, 0; 0, 45]
+	  DstBlock		  "Plot Update"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "= Zero?"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "New Axes"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "mod"
+	  SrcPort		  1
+	  DstBlock		  "Detect\nDecrease"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    DstBlock		    "= Zero?"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 40]
+	    DstBlock		    "mod"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "plotInt"
+	  SrcPort		  1
+	  DstBlock		  "mod"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Y"
+	  SrcPort		  1
+	  DstBlock		  "Plot Update"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Plot Update"
+	  SrcPort		  1
+	  DstBlock		  "h"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "X"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, 10]
+	  DstBlock		  "Plot Update"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "X2"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, -10]
+	  DstBlock		  "Plot Update"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Y2"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -20]
+	  DstBlock		  "Plot Update"
+	  DstPort		  5
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "XY2 Scatter"
+      SID		      "372"
+      Ports		      [4, 1]
+      Position		      [495, 304, 590, 386]
+      ShowPortLabels	      "FromPortBlockName"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Plotting Interval (Sim steps)"
+      MaskStyleString	      "edit"
+      MaskVariables	      "plotInt=@1;"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskDisplay	      "image(imread('../Libs/icons/XYFunc.JPG'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "10"
+      System {
+	Name			"XY2 Scatter"
+	Location		[588, 365, 1122, 770]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "X"
+	  SID			  "373"
+	  Position		  [135, 243, 165, 257]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y"
+	  SID			  "374"
+	  Position		  [135, 268, 165, 282]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X2"
+	  SID			  "375"
+	  Position		  [135, 293, 165, 307]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y2"
+	  SID			  "376"
+	  Position		  [135, 318, 165, 332]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "= Zero?"
+	  SID			  "377"
+	  Ports			  [1, 1]
+	  Position		  [270, 75, 300, 105]
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  "=="
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "378"
+	  Position		  [115, 80, 135, 100]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Detect\nDecrease"
+	  SID			  "379"
+	  Ports			  [1, 1]
+	  Position		  [255, 125, 315, 155]
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Detect\nDecrease"
+	  SourceType		  "Detect Decrease"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  vinit			  "0.0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "New Axes"
+	  SID			  "380"
+	  Ports			  [0, 1, 1]
+	  Position		  [370, 119, 435, 161]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "New Axes"
+	    Location		    [126, 289, 688, 579]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "381"
+	      Ports		      []
+	      Position		      [220, 55, 240, 75]
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Axes"
+	      SID		      "382"
+	      Ports		      [1, 1]
+	      Position		      [205, 135, 265, 165]
+	      MATLABFcn		      "gca();"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "fig"
+	      SID		      "383"
+	      Ports		      [1, 1]
+	      Position		      [105, 135, 165, 165]
+	      MATLABFcn		      "figure();"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "384"
+	      Position		      [345, 143, 375, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "fig"
+	      SrcPort		      1
+	      DstBlock		      "Axes"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Axes"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Scatter Update"
+	  SID			  "385"
+	  Ports			  [5, 1, 1]
+	  Position		  [265, 230, 340, 320]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Scatter Update"
+	    Location		    [340, 369, 785, 622]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "h"
+	      SID		      "386"
+	      Position		      [95, 68, 125, 82]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X"
+	      SID		      "387"
+	      Position		      [95, 93, 125, 107]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y"
+	      SID		      "388"
+	      Position		      [95, 118, 125, 132]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X2"
+	      SID		      "389"
+	      Position		      [95, 143, 125, 157]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y2"
+	      SID		      "390"
+	      Position		      [95, 168, 125, 182]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "391"
+	      Ports		      []
+	      Position		      [235, 30, 255, 50]
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "L2 M-file S-Funct"
+	      SID		      "392"
+	      Ports		      [5, 1]
+	      Position		      [215, 95, 275, 155]
+	      FunctionName	      "SScatter2"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "393"
+	      Position		      [350, 118, 380, 132]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Y2"
+	      SrcPort		      1
+	      Points		      [0, -30]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "X2"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -15]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "h"
+	      SrcPort		      1
+	      Points		      [0, 30]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "X"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, 15]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Y"
+	      SrcPort		      1
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "L2 M-file S-Funct"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "mod"
+	  SID			  "394"
+	  Ports			  [2, 1]
+	  Position		  [190, 122, 220, 153]
+	  Operator		  "rem"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "plotInt"
+	  SID			  "395"
+	  Position		  [100, 128, 145, 162]
+	  Value			  "plotInt"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "h"
+	  SID			  "396"
+	  Position		  [415, 268, 445, 282]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Y2"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -20]
+	  DstBlock		  "Scatter Update"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "X2"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, -10]
+	  DstBlock		  "Scatter Update"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "X"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, 10]
+	  DstBlock		  "Scatter Update"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Scatter Update"
+	  SrcPort		  1
+	  DstBlock		  "h"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Y"
+	  SrcPort		  1
+	  DstBlock		  "Scatter Update"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "plotInt"
+	  SrcPort		  1
+	  DstBlock		  "mod"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    Points		    [0, 40]
+	    DstBlock		    "mod"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "= Zero?"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "mod"
+	  SrcPort		  1
+	  DstBlock		  "Detect\nDecrease"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "= Zero?"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "New Axes"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "New Axes"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 60; -215, 0; 0, 45]
+	  DstBlock		  "Scatter Update"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [2, 0]
+	  SrcBlock		  "Detect\nDecrease"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 44; -45, 0]
+	  DstBlock		  "Scatter Update"
+	  DstPort		  enable
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "XY3 Plot"
+      SID		      "155"
+      Ports		      [6, 1]
+      Position		      [485, 162, 580, 263]
+      ShowPortLabels	      "FromPortBlockName"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Author: Jesse Palma"
+      MaskHelp		      "Author: Jesse Palma"
+      MaskPromptString	      "Plotting Interval (Sim steps)"
+      MaskStyleString	      "edit"
+      MaskVariables	      "plotInt=@1;"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskDisplay	      "image(imread('../Libs/icons/XYFunc.JPG'),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "10"
+      System {
+	Name			"XY3 Plot"
+	Location		[872, 299, 1539, 824]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "X"
+	  SID			  "156"
+	  Position		  [110, 248, 140, 262]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y"
+	  SID			  "157"
+	  Position		  [110, 273, 140, 287]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X2"
+	  SID			  "158"
+	  Position		  [110, 298, 140, 312]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y2"
+	  SID			  "159"
+	  Position		  [110, 323, 140, 337]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X3"
+	  SID			  "181"
+	  Position		  [110, 348, 140, 362]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Y3"
+	  SID			  "182"
+	  Position		  [110, 378, 140, 392]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "= Zero?"
+	  SID			  "160"
+	  Ports			  [1, 1]
+	  Position		  [270, 75, 300, 105]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  "=="
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  "on"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  SID			  "161"
+	  Position		  [115, 80, 135, 100]
+	  Decimation		  "10"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Detect\nDecrease"
+	  SID			  "162"
+	  Ports			  [1, 1]
+	  Position		  [255, 125, 315, 155]
+	  LibraryVersion	  "1.216"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Detect\nDecrease"
+	  SourceType		  "Detect Decrease"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  vinit			  "0.0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "New Axes"
+	  SID			  "163"
+	  Ports			  [0, 1, 1]
+	  Position		  [370, 119, 435, 161]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "New Axes"
+	    Location		    [816, 670, 1378, 960]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "164"
+	      Ports		      []
+	      Position		      [220, 55, 240, 75]
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Axes"
+	      SID		      "165"
+	      Ports		      [1, 1]
+	      Position		      [220, 135, 280, 165]
+	      MATLABFcn		      "gca;"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Fig"
+	      SID		      "185"
+	      Ports		      [1, 1]
+	      Position		      [100, 135, 160, 165]
+	      MATLABFcn		      "figure();"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "166"
+	      Position		      [385, 143, 415, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Axes"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fig"
+	      SrcPort		      1
+	      DstBlock		      "Axes"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Plot Update"
+	  SID			  "167"
+	  Ports			  [7, 1, 1]
+	  Position		  [255, 244, 350, 366]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Plot Update"
+	    Location		    [340, 369, 837, 694]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "h"
+	      SID		      "168"
+	      Position		      [95, 63, 125, 77]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X"
+	      SID		      "169"
+	      Position		      [95, 88, 125, 102]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y"
+	      SID		      "170"
+	      Position		      [95, 113, 125, 127]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X2"
+	      SID		      "171"
+	      Position		      [95, 138, 125, 152]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y2"
+	      SID		      "172"
+	      Position		      [95, 163, 125, 177]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "X3"
+	      SID		      "179"
+	      Position		      [95, 188, 125, 202]
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Y3"
+	      SID		      "180"
+	      Position		      [95, 218, 125, 232]
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "173"
+	      Ports		      []
+	      Position		      [235, 30, 255, 50]
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "L2 M-file S-Funct"
+	      SID		      "174"
+	      Ports		      [7, 1]
+	      Position		      [225, 104, 285, 186]
+	      FunctionName	      "SPlot3"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "h'"
+	      SID		      "175"
+	      Position		      [350, 138, 380, 152]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Y2"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, -15]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "X2"
+	      SrcPort		      1
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "h"
+	      SrcPort		      1
+	      Points		      [50, 0; 0, 45]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "X"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, 30]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Y"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 15]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "L2 M-file S-Funct"
+	      SrcPort		      1
+	      DstBlock		      "h'"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "X3"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, -30]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Y3"
+	      SrcPort		      1
+	      Points		      [50, 0; 0, -50]
+	      DstBlock		      "L2 M-file S-Funct"
+	      DstPort		      7
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "mod"
+	  SID			  "176"
+	  Ports			  [2, 1]
+	  Position		  [190, 122, 220, 153]
+	  Operator		  "rem"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "plotInt"
+	  SID			  "177"
+	  Position		  [100, 128, 145, 162]
+	  Value			  "plotInt"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "h"
+	  SID			  "178"
+	  Position		  [390, 298, 420, 312]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Y2"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -10]
+	  DstBlock		  "Plot Update"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "X2"
+	  SrcPort		  1
+	  DstBlock		  "Plot Update"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "X"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, 20]
+	  DstBlock		  "Plot Update"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Plot Update"
+	  SrcPort		  1
+	  DstBlock		  "h"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Y"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 10]
+	  DstBlock		  "Plot Update"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "plotInt"
+	  SrcPort		  1
+	  DstBlock		  "mod"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    Points		    [0, 40]
+	    DstBlock		    "mod"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "= Zero?"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "mod"
+	  SrcPort		  1
+	  DstBlock		  "Detect\nDecrease"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "= Zero?"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "New Axes"
+	  DstPort		  enable
+	}
+	Line {
+	  Labels		  [2, 0]
+	  SrcBlock		  "Detect\nDecrease"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 44; -45, 0]
+	  DstBlock		  "Plot Update"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "New Axes"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 70; -220, 0; 0, 50]
+	  DstBlock		  "Plot Update"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "X3"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -20]
+	  DstBlock		  "Plot Update"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Y3"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, -35]
+	  DstBlock		  "Plot Update"
+	  DstPort		  7
+	}
+      }
+    }
+  }
+}
